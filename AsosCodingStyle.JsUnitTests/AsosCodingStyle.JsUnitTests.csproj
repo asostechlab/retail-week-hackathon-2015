@@ -47,22 +47,16 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="libs\disabled-text.js" />
-    <Content Include="libs\jasmine-core\images\jasmine-horizontal.png" />
-    <Content Include="libs\jasmine-core\images\jasmine-horizontal.svg" />
-    <Content Include="libs\jasmine-core\images\jasmine_favicon.png" />
-    <Content Include="libs\jasmine-core\lib\console\console.js" />
-    <Content Include="libs\jasmine-core\lib\jasmine-core.js" />
-    <Content Include="libs\jasmine-core\lib\jasmine-core\boot.js" />
-    <Content Include="libs\jasmine-core\lib\jasmine-core\jasmine-html.js" />
-    <Content Include="libs\jasmine-core\lib\jasmine-core\jasmine.css" />
-    <Content Include="libs\jasmine-core\lib\jasmine-core\jasmine.js" />
-    <Content Include="libs\jasmine-core\lib\jasmine-core\json2.js" />
-    <Content Include="libs\jasmine-core\lib\jasmine-core\node_boot.js" />
-    <Content Include="libs\squirejs\Squire.js" />
     <Content Include="specList.js" />
     <Content Include="SpecRunner.html" />
     <Content Include="specs\app\app.specs.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="typedefinitions\jasmine.d.ts" />
+    <TypeScriptCompile Include="typedefinitions\jquery.d.ts" />
+    <TypeScriptCompile Include="typedefinitions\knockout.d.ts" />
+    <TypeScriptCompile Include="typedefinitions\require.d.ts" />
+    <TypeScriptCompile Include="typedefinitions\squirejs.d.ts" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
