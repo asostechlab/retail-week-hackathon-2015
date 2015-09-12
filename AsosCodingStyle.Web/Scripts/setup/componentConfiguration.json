@@ -1,0 +1,8 @@
+[
+  {
+    "componentName": "app",
+    "config": {
+      "require": "app/app"
+    }
+  }
+]
