@@ -4,5 +4,6 @@
 // AsosCodingStyle.JsUnitTests>dir /s /p /b specs\*.specs.js
 // and then stripping out the JsUnitTests directory and replacing \ with /
 var specFiles = [
-    '/specs/app/app.specs.js'
+    '/specs/app/app.specs.js',
+    '/specs/app/app2.specs.js'
 ];

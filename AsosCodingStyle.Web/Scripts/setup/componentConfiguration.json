@@ -4,5 +4,11 @@
     "config": {
       "require": "app/app"
     }
+  },
+  {
+    "componentName": "app2",
+    "config": {
+      "require": "app2/app2"
+    }
   }
 ]
