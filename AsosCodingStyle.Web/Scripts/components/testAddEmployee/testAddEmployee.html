@@ -1,0 +1,22 @@
+﻿<h3>Add Employee</h3>
+<form class="form-horizontal">
+    <div class="form-group">
+        <label for="EmployeeName" class="col-lg-2 control-label">Name:</label>
+        <div class="col-lg-6">
+            <input id="EmployeeName" data-bind="textInput: employeeName" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="EmployeeTitle" class="col-lg-2 control-label">Title:</label>
+        <div class="col-lg-6">
+            <input id="EmployeeTitle" data-bind="textInput: employeeTitle" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-lg-10 col-lg-offset-2">
+            <button data-bind="click: addEmployee" class="btn btn-success">Add Employee</button>
+        </div>
+    </div>
+</form>

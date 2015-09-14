@@ -1,0 +1,20 @@
+﻿<h3>Showing Employees...</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th colspan="2">Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- ko foreach: employees -->
+        <tr>
+            <td data-bind="text: $data.id"></td>
+            <td data-bind="text: $data.name"></td>
+            <td data-bind="text: $data.title"></td>
+            <td><button data-bind="click: $parent.removeEmployee" class="btn btn-danger btn-sm">Remove Employee</button></td>
+        </tr>
+        <!-- /ko -->
+    </tbody>
+</table>

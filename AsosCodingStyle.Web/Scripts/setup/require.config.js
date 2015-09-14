@@ -3,6 +3,7 @@
     paths: {
         'jquery': 'libs/jquery',
         'knockout': 'libs/knockout-latest.debug',
-        'text': 'libs/text'
+        'text': 'libs/text',
+        'lodash': 'libs/lodash'
     }
 });

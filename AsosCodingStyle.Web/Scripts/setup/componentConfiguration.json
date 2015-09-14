@@ -10,5 +10,17 @@
     "config": {
       "require": "components/testContactForm/testContactForm"
     }
+  },
+  {
+    "componentName": "testAddEmployee",
+    "config": {
+      "require": "components/testAddEmployee/testAddEmployee"
+    }
+  },
+  {
+    "componentName": "testShowEmployees",
+    "config": {
+      "require": "components/testShowEmployees/testShowEmployees"
+    }
   }
 ]

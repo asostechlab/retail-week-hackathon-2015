@@ -1,14 +1,19 @@
 ﻿<h1>Test App</h1>
+<div class="row">
+    <div class="col-lg-4">
+        <!-- ko component: 'testAddEmployee' --><!-- /ko -->
+    </div>
+    <div class="col-lg-4">
+        <!-- ko component: 'testShowEmployees' --><!-- /ko -->
+    </div>
+    <div class="col-lg-4">
+        <button data-bind="click: toggleContactForm.bind($data)" class="btn btn-success">Show/Hide contact form</button>
 
-<label for="EmployeeName">Employee Name:</label>
-<input id="EmployeeName" data-bind="textInput: employeeName" /><br />
+        <!-- ko if: isShowContactForm -->
+        <!-- ko component: 'testContactForm' --><!-- /ko -->
+        <!-- /ko -->
+    </div>
+</div>
+    
 
-<label for="EmployeeTitle">Employee Title:</label>
-<input id="EmployeeTitle" data-bind="textInput: employeeTitle" /><br />
-
-
-<button data-bind="click: toggleContactForm.bind($data)">Show/Hide contact form</button>
-
-<!-- ko if: isShowContactForm -->
-<!-- ko component: 'testContactForm' --><!-- /ko -->
-<!-- /ko -->
+            

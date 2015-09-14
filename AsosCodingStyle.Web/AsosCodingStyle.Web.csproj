@@ -78,7 +78,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
+    <Content Include="Scripts\components\testShowEmployees\testShowEmployees.html" />
+    <Content Include="Scripts\components\testAddEmployee\testAddEmployee.html" />
     <Content Include="Scripts\components\testApp\testApp.html" />
+    <TypeScriptCompile Include="Scripts\components\testShowEmployees\testShowEmployees.ts" />
+    <TypeScriptCompile Include="Scripts\components\testAddEmployee\testAddEmployee.ts" />
     <TypeScriptCompile Include="Scripts\components\testApp\testApp.ts" />
     <Content Include="Scripts\components\testContactForm\testContactForm.html" />
     <TypeScriptCompile Include="Scripts\components\testContactForm\testContactForm.ts" />
@@ -86,9 +90,9 @@
     <Content Include="Scripts\setup\require.config.js" />
     <Content Include="Scripts\setup\components.js" />
     <Content Include="Scripts\setup\startup.js" />
-    <Content Include="Styles\bootstrap-theme.css" />
     <Content Include="Styles\bootstrap.css" />
     <Content Include="Web.config" />
+    <TypeScriptCompile Include="typedefinitions\lodash.d.ts" />
     <TypeScriptCompile Include="typedefinitions\templates.d.ts" />
   </ItemGroup>
   <ItemGroup>
