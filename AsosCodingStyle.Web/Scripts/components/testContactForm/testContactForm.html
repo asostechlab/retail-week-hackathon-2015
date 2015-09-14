@@ -1,0 +1,15 @@
+﻿<h1>Test Contact form</h1>
+
+<label for="FirstName">First name:</label>
+<input id="FirstName" data-bind="textInput: firstName"/><br/>
+
+<label for="LastName">Last name:</label>
+<input id="LastName" data-bind="textInput: lastName"/><br/>
+
+<!-- ko if: isShowFullName -->
+Hi, <span data-bind="text: fullName"></span>
+<!-- /ko -->
+
+<!-- ko ifnot: isShowFullName -->
+Please enter your name...
+<!-- /ko -->

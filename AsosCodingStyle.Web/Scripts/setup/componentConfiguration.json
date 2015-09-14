@@ -1,14 +1,14 @@
 [
   {
-    "componentName": "app",
+    "componentName": "testApp",
     "config": {
-      "require": "app/app"
+      "require": "components/testApp/testApp"
     }
   },
   {
-    "componentName": "app2",
+    "componentName": "testContactForm",
     "config": {
-      "require": "app2/app2"
+      "require": "components/testContactForm/testContactForm"
     }
   }
 ]

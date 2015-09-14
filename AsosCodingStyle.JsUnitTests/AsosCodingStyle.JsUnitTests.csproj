@@ -55,8 +55,7 @@
   <ItemGroup>
     <Content Include="specList.js" />
     <Content Include="SpecRunner.html" />
-    <TypeScriptCompile Include="specs\app\app2.specs.ts" />
-    <Content Include="specs\app\app.specs.js" />
+    <TypeScriptCompile Include="specs\components\testApp\testApp.specs.ts" />
     <TypeScriptCompile Include="typedefinitions\templates.d.ts" />
   </ItemGroup>
   <ItemGroup>

@@ -78,13 +78,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
-    <Content Include="Scripts\app2\app2.html" />
-    <TypeScriptCompile Include="Scripts\app2\app2.ts" />
-    <Content Include="Scripts\app\app.html" />
-    <Content Include="Scripts\app\app.js" />
-    <Content Include="Scripts\require.config.js" />
+    <Content Include="Scripts\components\testApp\testApp.html" />
+    <TypeScriptCompile Include="Scripts\components\testApp\testApp.ts" />
+    <Content Include="Scripts\components\testContactForm\testContactForm.html" />
+    <TypeScriptCompile Include="Scripts\components\testContactForm\testContactForm.ts" />
+    <TypeScriptCompile Include="Scripts\models\testModel.ts" />
+    <Content Include="Scripts\setup\require.config.js" />
     <Content Include="Scripts\setup\components.js" />
-    <Content Include="Scripts\startup.js" />
+    <Content Include="Scripts\setup\startup.js" />
     <Content Include="Styles\bootstrap-theme.css" />
     <Content Include="Styles\bootstrap.css" />
     <Content Include="Web.config" />
@@ -164,6 +165,10 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>powershell Set-ExecutionPolicy UnRestricted
+powershell "../generate-templates.ps1"</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

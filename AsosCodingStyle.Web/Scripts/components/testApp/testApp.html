@@ -1,0 +1,14 @@
+﻿<h1>Test App</h1>
+
+<label for="EmployeeName">Employee Name:</label>
+<input id="EmployeeName" data-bind="textInput: employeeName" /><br />
+
+<label for="EmployeeTitle">Employee Title:</label>
+<input id="EmployeeTitle" data-bind="textInput: employeeTitle" /><br />
+
+
+<button data-bind="click: toggleContactForm.bind($data)">Show/Hide contact form</button>
+
+<!-- ko if: isShowContactForm -->
+<!-- ko component: 'testContactForm' --><!-- /ko -->
+<!-- /ko -->
