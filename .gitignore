@@ -150,7 +150,7 @@ publish/
 ## TODO: Comment the next line if you want to checkin your
 ## web deploy settings but do note that will include unencrypted
 ## passwords
-#*.pubxml
+##*.pubxml
 
 =======
 # TODO: Comment the next line if you want to checkin your web deploy settings 
