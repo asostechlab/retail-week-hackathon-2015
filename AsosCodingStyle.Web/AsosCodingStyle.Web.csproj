@@ -104,6 +104,7 @@
     </TypeScriptCompile>
     <TypeScriptCompile Include="Scripts\models\orderModel.ts" />
     <TypeScriptCompile Include="Scripts\models\testModel.ts" />
+    <TypeScriptCompile Include="Scripts\models\reasonsModel.ts" />
     <Content Include="Scripts\setup\require.config.js" />
     <Content Include="Scripts\setup\components.js" />
     <Content Include="Scripts\setup\startup.js" />

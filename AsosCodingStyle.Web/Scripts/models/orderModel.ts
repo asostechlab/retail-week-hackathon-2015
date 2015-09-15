@@ -3,7 +3,7 @@ import ko = require('knockout');
 import Order = AsosCodingStyle.Data.Order;
 
 export class OrderModel {
-    
+
     // todo: implement the get method with a loading indicator
     constructor() {
         this.order = {
@@ -20,18 +20,18 @@ export class OrderModel {
                         Size: 'Small'
                     },
                     Quantity: 1,
-    // todo: Scott will give me a price at some time...
                     Price: 95.00,
-                    OtherReturnsFeedback: null
+                    FeedbackTypes: [],
+                    Return: {
+                        ExtraInformation: null,
+                        Reason: null
+                    }
                 }
             ]
         };
     }
 
     order: Order;
-
-    // todo: wire this up to the strongly typed shizzle...
-    static RefundReasons: any[] = ['Quality', 'Sizing', 'Damaged', 'Didn\'t Like', 'Other'];
 }
 
 var instance = new OrderModel();
