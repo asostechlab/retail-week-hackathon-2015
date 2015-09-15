@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsosCodingStyle.WebApi", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsosCodingStyle.WebApi.UnitTests", "AsosCodingStyle.WebApi.UnitTests\AsosCodingStyle.WebApi.UnitTests.csproj", "{4C7D48EE-2E0B-47C8-9FAF-CEFD09A534F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsosCodingStyle.Data", "AsosCodingStyle.Data\AsosCodingStyle.Data.csproj", "{33DBC4B9-C7A7-4E4E-BD31-71C1CFA87D7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsosCodingStyle.Data.Scraper", "AsosCodingStyle.Data.Scraper\AsosCodingStyle.Data.Scraper.csproj", "{92130AE4-DF0A-44A5-9BF1-E1BB95ECD740}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,14 @@ Global
 		{4C7D48EE-2E0B-47C8-9FAF-CEFD09A534F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C7D48EE-2E0B-47C8-9FAF-CEFD09A534F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C7D48EE-2E0B-47C8-9FAF-CEFD09A534F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33DBC4B9-C7A7-4E4E-BD31-71C1CFA87D7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33DBC4B9-C7A7-4E4E-BD31-71C1CFA87D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33DBC4B9-C7A7-4E4E-BD31-71C1CFA87D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33DBC4B9-C7A7-4E4E-BD31-71C1CFA87D7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92130AE4-DF0A-44A5-9BF1-E1BB95ECD740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92130AE4-DF0A-44A5-9BF1-E1BB95ECD740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92130AE4-DF0A-44A5-9BF1-E1BB95ECD740}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92130AE4-DF0A-44A5-9BF1-E1BB95ECD740}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
