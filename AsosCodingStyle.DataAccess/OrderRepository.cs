@@ -1,99 +1,48 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AsosCodingStyle.Data;
-using Microsoft.Azure.Documents;
-using Microsoft.Azure.Documents.Client;
-using Microsoft.Azure.Documents.Linq;
-
-namespace AsosCodingStyle.DataAccess
+﻿namespace AsosCodingStyle.DataAccess
 {
-    public class OrderRepository {
-        private const string EndpointUrl = "https://asos-codingstyle-hackathon.documents.azure.com:443/";
-        private const string AuthorizationKey = "vTsjSQ2x2UDKhGFl4dumk/cZ3N8+xv5iM0kdZqU4bwtecYyGhslYxF26fCkCjwL9K/Hf3NzChiiBo6oBPWoFHg==";
-        private const string DatabaseId = "hackathon";
-        private const string OrderCollection = "Order";
-        private DocumentClient _client;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using Data;
+    using MongoDB.Bson;
+    using MongoDB.Driver;
+
+    public class OrderRepository
+    {
+        private const string ConnectionString =
+            "mongodb://asoscodingstyle:asoscodingstyle1@ds051851.mongolab.com:51851/asoscodingstyle";
+
+        private const string OrderCollection = "orders";
+        private readonly IMongoCollection<Order> orderCollection;
+
+        public OrderRepository()
+        {
+            var client = new MongoClient(ConnectionString);
+            var database = client.GetDatabase("asoscodingstyle");
+
+            orderCollection = database.GetCollection<Order>(OrderCollection);
+        }
 
         public async Task<Order> GetOrder(string orderId)
         {
-            using (_client = new DocumentClient(new Uri(EndpointUrl), AuthorizationKey))
-            {
-                var dbQuery = _client.CreateDatabaseQuery().Where(c => c.Id == DatabaseId);
-                var database = dbQuery.ToArray().FirstOrDefault() ?? await _client.CreateDatabaseAsync(new Database { Id = DatabaseId });
+            var filter = Builders<Order>.Filter.Eq(order => order.Id, orderId);
 
-                var collection = await GetOrCreateCollectionAsync(database, OrderCollection);
+            var result = await orderCollection.FindAsync(filter);
 
-                return _client.CreateDocumentQuery<Order>(collection.SelfLink).FirstOrDefault(order => order.Id == orderId);
-            }
+            var foundOrders = await result.ToListAsync();
+
+            return foundOrders.FirstOrDefault();
         }
 
         public async Task SaveOrder(Order orderToSave)
         {
-            using (_client = new DocumentClient(new Uri(EndpointUrl), AuthorizationKey))
+            var filter = Builders<Order>.Filter.Eq(s => s.Id, orderToSave.Id);
+
+            var result = await orderCollection.FindOneAndReplaceAsync(filter, orderToSave);
+
+            if (result == null)
             {
-                var dbQuery = _client.CreateDatabaseQuery().Where(c => c.Id == DatabaseId);
-                var database = dbQuery.ToArray().FirstOrDefault() ?? await _client.CreateDatabaseAsync(new Database { Id = DatabaseId });
-
-                var collection = await GetOrCreateCollectionAsync(database, OrderCollection);
-
-               var existingOrder = _client.CreateDocumentQuery<Document>(collection.SelfLink).Where(d => d.Id == orderToSave.Id).AsEnumerable().FirstOrDefault();
-
-                if (existingOrder != null)
-                {
-                    await _client.ReplaceDocumentAsync(existingOrder.SelfLink, orderToSave);
-                }
-                else
-                {
-                    Document created = await _client.CreateDocumentAsync(collection.SelfLink, orderToSave);
-                }
+                await orderCollection.InsertOneAsync(orderToSave);
             }
-
-        }
-
-        private async Task<DocumentCollection> GetOrCreateCollectionAsync(Database db, string id)
-        {
-            using (_client = new DocumentClient(new Uri(EndpointUrl), AuthorizationKey))
-            {
-                DocumentCollection collection = _client.CreateDocumentCollectionQuery(db.SelfLink).Where(c => c.Id == id).ToArray().FirstOrDefault();
-
-                if (collection == null)
-                {
-                    IndexingPolicy optimalQueriesIndexingPolicy = new IndexingPolicy();
-                    optimalQueriesIndexingPolicy.IncludedPaths.Add(new IncludedPath
-                    {
-                        Path = "/*",
-                        Indexes = new System.Collections.ObjectModel.Collection<Index>()
-                        {
-                            new RangeIndex(DataType.Number) {Precision = -1},
-                            new RangeIndex(DataType.String) {Precision = -1}
-                        }
-                    });
-
-                    DocumentCollection collectionDefinition = new DocumentCollection {Id = id};
-                    collectionDefinition.IndexingPolicy = optimalQueriesIndexingPolicy;
-
-                    collection = await CreateDocumentCollectionAsync(db, collectionDefinition);
-                }
-
-                return collection;
-            }
-        }
-
-        public async Task<DocumentCollection> CreateDocumentCollectionAsync(
-            Database database,
-            DocumentCollection collectionDefinition,
-            string offerType = "S1")
-        {
-            return await _client.CreateDocumentCollectionAsync(
-                database.SelfLink,
-                collectionDefinition,
-                new RequestOptions
-                {
-                    OfferType = offerType
-                });
         }
     }
 }
