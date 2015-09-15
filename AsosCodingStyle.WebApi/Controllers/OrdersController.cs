@@ -27,7 +27,7 @@ namespace AsosCodingStyle.WebApi.Controllers
                 });
             }
 
-            return new Order {OrderId = 1, DateCreated = DateTime.UtcNow, Items = orderItems};
+            return new Order {Id = 1.ToString(), DateCreated = DateTime.UtcNow, Items = orderItems};
         }
 
         [HttpPost]

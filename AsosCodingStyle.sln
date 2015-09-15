@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsosCodingStyle.Data", "Aso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsosCodingStyle.Data.Scraper", "AsosCodingStyle.Data.Scraper\AsosCodingStyle.Data.Scraper.csproj", "{92130AE4-DF0A-44A5-9BF1-E1BB95ECD740}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsosCodingStyle.DataAccess", "AsosCodingStyle.DataAccess\AsosCodingStyle.DataAccess.csproj", "{1E46BCED-1B14-444A-B596-9206816E27B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{92130AE4-DF0A-44A5-9BF1-E1BB95ECD740}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92130AE4-DF0A-44A5-9BF1-E1BB95ECD740}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92130AE4-DF0A-44A5-9BF1-E1BB95ECD740}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E46BCED-1B14-444A-B596-9206816E27B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E46BCED-1B14-444A-B596-9206816E27B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E46BCED-1B14-444A-B596-9206816E27B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E46BCED-1B14-444A-B596-9206816E27B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

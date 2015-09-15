@@ -10,7 +10,7 @@ namespace AsosCodingStyle.Data
     [TsClass]
     public class Order
     {
-        public int OrderId { get; set; }
+        public string Id { get; set; }
 
         public List<OrderItem> Items { get; set; }
 

@@ -8,7 +8,7 @@
 
 declare module AsosCodingStyle.Data {
 	interface Order {
-		OrderId: number;
+		Id: string;
 		Items: AsosCodingStyle.Data.OrderItem[];
 		DateCreated: Date;
 	}
@@ -16,7 +16,9 @@ declare module AsosCodingStyle.Data {
 		OrderItemId: number;
 		Product: AsosCodingStyle.Data.Product;
 		Quantity: number;
-	    OtherReturnsFeedback: string;
+		Price: number;
+		Return: AsosCodingStyle.Data.OrderItemReturn;
+		FeedbackTypes: AsosCodingStyle.Data.OrderItemFeedbackType[];
 	}
 	interface Product {
 		ProductId: number;
@@ -24,6 +26,10 @@ declare module AsosCodingStyle.Data {
 		Size: string;
 		Colour: string;
 		ImageUrl: string;
+	}
+	interface OrderItemReturn {
+		Reason: AsosCodingStyle.Data.ReturnReasonType;
+		ExtraInformation: string;
 	}
 }
 
