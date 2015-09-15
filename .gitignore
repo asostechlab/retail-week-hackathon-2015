@@ -155,7 +155,7 @@ publish/
 =======
 # TODO: Comment the next line if you want to checkin your web deploy settings 
 # but database connection strings (with potential passwords) will be unencrypted
-*.pubxml
+##*.pubxml
 >>>>>>> 9f5e722f383cc767b70265aa0b48a00a874384ac
 *.publishproj
 
