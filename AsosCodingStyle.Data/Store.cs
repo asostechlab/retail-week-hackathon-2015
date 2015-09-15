@@ -9,12 +9,16 @@ namespace AsosCodingStyle.Data
 {
     public class Store
     {
+        public static List<OrderItemFeedback> OrderItemFeedbackOptions
+        {
+            get { return new[] { new OrderItemFeedback { FeedbackType = OrderItemFeedbackType.LoveTheColour, Description = "Love the colour" }, new OrderItemFeedback { FeedbackType = OrderItemFeedbackType.LoveTheSize, Description = "Love the size" }, new OrderItemFeedback { FeedbackType = OrderItemFeedbackType.LoveTheFeel, Description = "Love the feel" } }.ToList(); }
+        }
+
         public static List<Product> Products
         {
             get
             {
                 var products = JsonConvert.DeserializeObject<List<Product>>(Resources.Data);
-//                products.Add(new Product { ProductId = 1, Colour = "Black", Size = "L", Description = "Diesel Larkee 8Xr Straight Fit Jeans", ImageUrl = "" });
                 return products;
             }
         }
