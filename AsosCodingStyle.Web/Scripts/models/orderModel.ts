@@ -26,6 +26,23 @@ export class OrderModel {
                         ExtraInformation: null,
                         Reason: null
                     }
+                },
+                {
+                    OrderItemId: 2,
+                    Product: {
+                        ProductId: 1,
+                        Colour: 'Red',
+                        Description: 'Superdry Polar Jacket with Hood',
+                        ImageUrl: 'http://images.asos-media.com/inv/media/7/5/5/6/5676557/black/image1xxl.jpg',
+                        Size: 'Small'
+                    },
+                    Quantity: 1,
+                    Price: 95.00,
+                    FeedbackTypes: [],
+                    Return: {
+                        ExtraInformation: null,
+                        Reason: null
+                    }
                 }
             ]
         };

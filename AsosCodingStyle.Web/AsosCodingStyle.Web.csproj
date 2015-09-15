@@ -84,6 +84,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="fonts\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
@@ -116,7 +118,9 @@
     <Content Include="Scripts\setup\require.config.js" />
     <Content Include="Scripts\setup\components.js" />
     <Content Include="Scripts\setup\startup.js" />
+    <Content Include="Styles\site.css" />
     <Content Include="Styles\bootstrap.css" />
+    <Content Include="Styles\font-awesome.min.css" />
     <Content Include="Web.config" />
     <TypeScriptCompile Include="Scripts\TypeLite.Net4.d.ts">
       <AutoGen>True</AutoGen>
@@ -147,6 +151,10 @@
       <LastGenOutput>TypeLite.Net4.d.ts</LastGenOutput>
     </Content>
     <Content Include="Scripts\Manager.ttinclude" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
     <None Include="Properties\PublishProfiles\asos-coding-style-web.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
