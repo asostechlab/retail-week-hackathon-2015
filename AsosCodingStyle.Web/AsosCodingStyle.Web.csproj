@@ -87,10 +87,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
+    <Content Include="Scripts\components\orderItem\orderItem.html" />
+    <Content Include="Scripts\components\order\order.html" />
     <Content Include="Scripts\components\testShowEmployees\testShowEmployees.html" />
     <Content Include="Scripts\components\testAddEmployee\testAddEmployee.html" />
     <Content Include="Scripts\components\testApp\testApp.html" />
     <TypeScriptCompile Include="Scripts\apis\testApi.ts" />
+    <TypeScriptCompile Include="Scripts\components\orderItem\orderItem.ts" />
+    <TypeScriptCompile Include="Scripts\components\order\order.ts" />
     <TypeScriptCompile Include="Scripts\components\testShowEmployees\testShowEmployees.ts" />
     <TypeScriptCompile Include="Scripts\components\testAddEmployee\testAddEmployee.ts" />
     <TypeScriptCompile Include="Scripts\components\testApp\testApp.ts" />
@@ -99,6 +103,7 @@
     <TypeScriptCompile Include="Scripts\Enums.ts">
       <DependentUpon>TypeLite.Net4.tt</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Scripts\models\orderModel.ts" />
     <TypeScriptCompile Include="Scripts\models\testModel.ts" />
     <Content Include="Scripts\setup\require.config.js" />
     <Content Include="Scripts\setup\components.js" />
@@ -180,7 +185,7 @@
     <TypeScriptMapRoot />
     <TypeScriptSourceRoot />
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Any CPU'">
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <TypeScriptTarget>ES3</TypeScriptTarget>
     <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
     <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
