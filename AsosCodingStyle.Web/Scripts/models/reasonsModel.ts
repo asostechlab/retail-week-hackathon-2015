@@ -1,11 +1,11 @@
 ﻿/// <reference path="../../../AsosCodingStyle.Data/Scripts/TypeLite.Net4.d.ts" />
 
-export interface IRefundReason {
+export interface IReturnReason {
     value: AsosCodingStyle.Data.ReturnReasonType;
     text: string;
 }
 
-var returnReasons: IRefundReason[] = [
+var returnReasons: IReturnReason[] = [
     { value: AsosCodingStyle.Data.ReturnReasonType.Quality, text: 'Quality' },
     { value: AsosCodingStyle.Data.ReturnReasonType.Size, text: 'Sizing' },
     { value: AsosCodingStyle.Data.ReturnReasonType.Damaged, text: 'Damaged' },
@@ -18,10 +18,10 @@ export interface IFeedbackType {
     text: string;
 }
 
-var feedbackTypes: IFeedbackType[] = [
+var positiveFeedbackTypes: IFeedbackType[] = [
     { value: AsosCodingStyle.Data.OrderItemFeedbackType.LoveTheColour, text: 'Love the colour' },
     { value: AsosCodingStyle.Data.OrderItemFeedbackType.LoveTheFeel, text: 'Love the feel' },
     { value: AsosCodingStyle.Data.OrderItemFeedbackType.LoveTheSize, text: 'Love the size' }
 ];
 
-export {returnReasons, feedbackTypes}
+export {returnReasons, positiveFeedbackTypes}

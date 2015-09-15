@@ -11,36 +11,43 @@
             </p>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <button class="btn btn-block btn-success-on-hover">I love it!</button>
+                    <button data-bind="click: selectPositiveFeedback, css: { 'btn-success': feedbackMethod() === 'POSITIVE' }" class="btn btn-block btn-success-on-hover">I love it!</button>
                 </div>
                 <div class="col-lg-4">
-                    <button class="btn btn-block btn-warning-on-hover">Return it</button>
+                    <button data-bind="click: selectReturnsFeedback, css: { 'btn-warning': feedbackMethod() === 'RETURNS' }" class="btn btn-block btn-warning-on-hover">Return it</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- ko if: isShowPositiveFeedback -->
     <div class="row">
-        <div class="col-lg-3">$nbsp;</div>
-        <!-- ko foreach: positiveFeedback -->
+        <div class="col-lg-3"></div>
+        <!-- ko foreach: positiveFeedbackTypes -->
         <div class="col-lg-2">
-            <button><span data-bind="text: $data"></span></button>
+            <button data-bind="click: $parent.toggleFeedbackType.bind($parent), css: { 'btn-success': $parent.isFeedbackTypeSelected.call($parent, $data) }"
+                    class="btn btn-block btn-success-on-hover">
+                <span data-bind="text: $data.text"></span>
+            </button>
         </div>
         <!-- /ko -->
     </div>
     <!-- /ko -->
     <!-- ko if: isShowReturnsFeedback -->
     <div class="row">
-        <div class="col-lg-1">
-            <!-- ko foreach: returnReasons -->
-            <textarea />
-            <!-- /ko -->
+        <div class="col-lg-1"></div>
+        <!-- ko foreach: returnReasons -->
+        <div class="col-lg-2">
+            <button data-bind="click: $parent.selectReturnReason.bind($parent), css: { 'btn-warning': $parent.isReturnReasonSelected.call($parent, $data) }"
+                    class="btn btn-block btn-warning-on-hover">
+                <span data-bind="text: $data.text"></span>
+            </button>
         </div>
+        <!-- /ko -->
     </div>
     <!-- ko if: isShowReturnsOtherFeedback -->
     <div class="row">
-        <div class="col-lg-1">
-            Some other feedback textbox
+        <div class="col-lg-12">
+            <textarea data-bind="value: otherReturnReasonText" class="form-control" placeholder="(optional) Sorry to hear you didn't like it. Would you like to give us any feedback?"></textarea>
         </div>
     </div>
     <!-- /ko -->
