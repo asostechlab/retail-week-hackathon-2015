@@ -24,10 +24,13 @@
 
         public async Task<Order> GetOrder(string orderId)
         {
-            var list = await orderCollection.Find(new BsonDocument("Id", orderId))
-                .ToListAsync();
+            var filter = Builders<Order>.Filter.Eq(order => order.Id, orderId);
 
-            return list.FirstOrDefault();
+            var result = await orderCollection.FindAsync(filter);
+
+            var foundOrders = await result.ToListAsync();
+
+            return foundOrders.FirstOrDefault();
         }
 
         public async Task SaveOrder(Order orderToSave)
