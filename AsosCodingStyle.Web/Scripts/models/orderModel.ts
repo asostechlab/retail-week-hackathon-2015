@@ -29,9 +29,12 @@ export class OrderModel {
                 }
             ]
         };
+
+        this.orderItemsToReturn = ko.observableArray([]);
     }
 
     order: Order;
+    orderItemsToReturn: KnockoutObservableArray<number>;
 }
 
 var instance = new OrderModel();

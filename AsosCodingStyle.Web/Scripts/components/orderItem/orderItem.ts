@@ -2,6 +2,7 @@
 import templateMarkup = require('text!./orderItem.html');
 import ko = require('knockout');
 import ReasonsModel = require("../../models/reasonsModel");
+import OrderModel = require("../../models/orderModel");
 import _ = require('lodash');
 
 export class OrderItem {
@@ -19,6 +20,13 @@ export class OrderItem {
         this.otherReturnReasonText = ko.observable(null);
 
         // Writing the data back to the model as the user interacts with it...
+        this.feedbackMethod.subscribe(newValue => {
+            if (newValue === this.PositiveFeedbackType) {
+                OrderModel.instance.orderItemsToReturn.remove(this.orderItem.OrderItemId);
+            } else {
+                OrderModel.instance.orderItemsToReturn.push(this.orderItem.OrderItemId);
+            }
+        });
         this.feedbackTypes.subscribe(newValue => this.orderItem.FeedbackTypes);
         this.returnReason.subscribe(newValue => this.orderItem.Return.Reason = newValue);
         this.otherReturnReasonText.subscribe(newValue => this.orderItem.Return.ExtraInformation = newValue);

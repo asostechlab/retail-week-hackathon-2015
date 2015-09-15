@@ -1,5 +1,10 @@
 ﻿<h1>Order items</h1>
+
 <!-- ko foreach: orderItems -->
 <!-- ko component: {name: 'orderItem', params: {data: $data} }--><!-- /ko -->
 <!-- /ko -->
+
+<!-- ko if: isReturningItems -->
 <span data-bind="text: returnSummaryText"></span>
+<!-- /ko -->
+
