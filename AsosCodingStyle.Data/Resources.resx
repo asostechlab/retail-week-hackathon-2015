@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Data" xml:space="preserve">
+    <value>[{"ProductId":1,"Description":"Larkee 8Xr Straight Fit Jeans","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Diesel+Larkee+8Xr+Straight+Fit+Jeans/128168417,default,pd.html"},{"ProductId":2,"Description":"Larkee 8Z8 Straight Leg Jeans","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Diesel+Larkee+8Z8+Straight+Leg+Jeans/171615659,default,pd.html"},{"ProductId":3,"Description":"Zatiny 8XR Bootcut Jeans","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Diesel+Zatiny+8XR+Bootcut+Jeans/124527821,default,pd.html"},{"ProductId":4,"Description":"Waykee 814W Straight Leg Stretch Jeans","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Diesel+Waykee+814W+Straight+Leg+Stretch+Jeans/209657903,default,pd.html"},{"ProductId":5,"Description":"Scanton Medium Wash Low Rise Jeans","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Tommy+Hilfiger+Scanton+Medium+Wash+Low+Rise+Jeans/216297706,default,pd.html"},{"ProductId":6,"Description":"501 Black Straight Jeans","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Levi%27s+501+Black+Straight+Jeans/114281041,default,pd.html"},{"ProductId":7,"Description":"Comfort stretch cotton jeans","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Gant+Comfort+stretch+cotton+jeans/144237608,default,pd.html"},{"ProductId":8,"Description":"Maine Dark Wash Mid Rise Jeans","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Hugo+Boss+Maine+Dark+Wash+Mid+Rise+Jeans/225080255,default,pd.html"},{"ProductId":9,"Description":"Waykee 88Z Straight Leg Jeans","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Diesel+Waykee+88Z+Straight+Leg+Jeans/193252833,default,pd.html"},{"ProductId":10,"Description":"511 red bluff slim fit jean","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Levi%27s+511+red+bluff+slim+fit+jean/225577951,default,pd.html"},{"ProductId":11,"Description":"511 slim fit moonshine jeans","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Levi%27s+511+slim+fit+moonshine+jeans/185220733,default,pd.html"},{"ProductId":12,"Description":"Line 8 511 midnight rigid slim fit jean","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Levi%27s+Line+8+511+midnight+rigid+slim+fit+jean/225577799,default,pd.html"},{"ProductId":13,"Description":"Belther 814W Tapered Fit Stretch Jeans","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Diesel+Belther+814W+Tapered+Fit+Stretch+Jeans/191597130,default,pd.html"},{"ProductId":14,"Description":"Safado 885k straight leg STRETCH JEANS","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Diesel+Safado+885k+straight+leg+STRETCH+JEANS/199926901,default,pd.html"},{"ProductId":15,"Description":"511 Slim Fit Grey Joplin Jean","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Levi%27s+511+Slim+Fit+Grey+Joplin+Jean/211027635,default,pd.html"},{"ProductId":16,"Description":"J21 Regular Fit Jeans","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Armani+Jeans+J21+Regular+Fit+Jeans/188633896,default,pd.html"},{"ProductId":17,"Description":"Slater Slim Leg Indigo Jeans","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Criminal+Slater+Slim+Leg+Indigo+Jeans/206975239,default,pd.html"},{"ProductId":18,"Description":"501 Stonewash Straight Jeans","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Levi%27s+501+Stonewash+Straight+Jeans/114598228,default,pd.html"},{"ProductId":19,"Description":"504 regular straight leg moonshine jeans","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Levi%27s+504+regular+straight+leg+moonshine+jeans/227799428,default,pd.html"},{"ProductId":20,"Description":"Bridgeport Five Pocket Washed Jeans","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Howick+Bridgeport+Five+Pocket+Washed+Jeans/209982992,default,pd.html"},{"ProductId":21,"Description":"Waykee 886Z Straight Stretch Jeans","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Diesel+Waykee+886Z+Straight+Stretch+Jeans/209659206,default,pd.html"},{"ProductId":22,"Description":"Line 8 511 indigo vintage worn slim fit jean","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Levi%27s+Line+8+511+indigo+vintage+worn+slim+fit+jean/225577618,default,pd.html"},{"ProductId":23,"Description":"Madison vintage jean","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Tommy+Hilfiger+Madison+vintage+jean/188660550,default,pd.html"},{"ProductId":24,"Description":"Line 8 511 silverfish rigid slim fit jean","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Levi%27s+Line+8+511+silverfish+rigid+slim+fit+jean/225577414,default,pd.html"},{"ProductId":25,"Description":"Scanton slim leg denim jean","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Tommy+Hilfiger+Scanton+slim+leg+denim+jean/196396408,default,pd.html"},{"ProductId":26,"Description":"J21 Regular Fit Jeans","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Armani+Jeans+J21+Regular+Fit+Jeans/187607339,default,pd.html"},{"ProductId":27,"Description":"J21 Regular Fit Mid Rise Jean","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Armani+Jeans+J21+Regular+Fit+Mid+Rise+Jean/211474793,default,pd.html"},{"ProductId":28,"Description":"511 ROCK COD SLIM FIT JEAN","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Levi%27s+511+ROCK+COD+SLIM+FIT+JEAN/225567257,default,pd.html"},{"ProductId":29,"Description":"Line 8 511 grey rigid slim fit jean","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Levi%27s+Line+8+511+grey+rigid+slim+fit+jean/225580394,default,pd.html"},{"ProductId":30,"Description":"501 Marlon Straight Fit Jeans","Size":"Large","Colour":"Blue","ImageUrl":"http://www.houseoffraser.co.uk/Levi%27s+501+Marlon+Straight+Fit+Jeans/114598456,default,pd.html"}]</value>
+  </data>
+</root>
