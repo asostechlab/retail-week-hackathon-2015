@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Web.Http;
-using AsosCodingStyle.Data;
-
-namespace AsosCodingStyle.WebApi.Controllers
+﻿namespace AsosCodingStyle.WebApi.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Web.Http;
+    using Data;
+
     [RoutePrefix("customer/orders")]
     public class OrdersController : ApiController
     {

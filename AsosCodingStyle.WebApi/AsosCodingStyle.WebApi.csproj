@@ -86,7 +86,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\JsonContentNegotiator.cs" />
+    <Compile Include="Infrastructure\JsonContent\JsonContentNegotiator.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
