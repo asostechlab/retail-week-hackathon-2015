@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TypeLite;
 
 namespace AsosCodingStyle.Data
 {
+    [TsClass]
     public class OrderItem
     {
         public int OrderItemId { get; set; }

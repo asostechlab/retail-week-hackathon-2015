@@ -239,3 +239,23 @@ ModelManifest.xml
 **/*.Server/ModelManifest.xml
 _Pvt_Extensions
 >>>>>>> 9f5e722f383cc767b70265aa0b48a00a874384ac
+/AsosCodingStyle.Web/Scripts/models/testModel.js.map
+/AsosCodingStyle.Web/Scripts/models/testModel.js
+/AsosCodingStyle.Web/Scripts/Enums.js.map
+/AsosCodingStyle.Web/Scripts/Enums.js
+/AsosCodingStyle.Web/Scripts/components/testShowEmployees/testShowEmployees.js.map
+/AsosCodingStyle.Web/Scripts/components/testShowEmployees/testShowEmployees.js
+/AsosCodingStyle.Web/Scripts/components/testShowEmployees/testAddEmployee.js.map
+/AsosCodingStyle.Web/Scripts/components/testShowEmployees/testAddEmployee.js
+/AsosCodingStyle.Web/Scripts/components/testContactForm/testContactForm.js.map
+/AsosCodingStyle.Web/Scripts/components/testContactForm/testContactForm.js
+/AsosCodingStyle.Web/Scripts/components/testApp/testApp.js.map
+/AsosCodingStyle.Web/Scripts/components/testApp/testApp.js
+/AsosCodingStyle.Web/Scripts/components/testAddEmployee/testAddEmployee.js.map
+/AsosCodingStyle.Web/Scripts/components/testAddEmployee/testAddEmployee.js
+/AsosCodingStyle.Web/Scripts/apis/testApi.js.map
+/AsosCodingStyle.Web/Scripts/apis/testApi.js
+/AsosCodingStyle.JsUnitTests/specs/components/testApp/testApp.specs.js.map
+/AsosCodingStyle.JsUnitTests/specs/components/testApp/testApp.specs.js
+/AsosCodingStyle.Data/Scripts/Enums.js.map
+/AsosCodingStyle.Data/Scripts/Enums.js
