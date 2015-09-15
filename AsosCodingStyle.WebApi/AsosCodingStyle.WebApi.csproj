@@ -110,6 +110,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AsosCodingStyle.DataAccess\AsosCodingStyle.DataAccess.csproj">
+      <Project>{1e46bced-1b14-444a-b596-9206816e27b6}</Project>
+      <Name>AsosCodingStyle.DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AsosCodingStyle.Data\AsosCodingStyle.Data.csproj">
       <Project>{33dbc4b9-c7a7-4e4e-bd31-71c1cfa87d7b}</Project>
       <Name>AsosCodingStyle.Data</Name>

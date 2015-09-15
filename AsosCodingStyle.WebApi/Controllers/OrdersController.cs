@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Web.Http;
 using AsosCodingStyle.Data;
+using AsosCodingStyle.DataAccess;
 
 namespace AsosCodingStyle.WebApi.Controllers
 {
@@ -10,11 +12,13 @@ namespace AsosCodingStyle.WebApi.Controllers
     {
         [HttpGet]
         [Route("{orderId}")]
-        public Order Get(int orderId)
+        public async Task<Order> Get(int orderId)
         {
+            // return await new OrderRepository().GetOrder(orderId.ToString()); ;
+
             var orderItems = new List<OrderItem>();
             var products = Store.Products;
-            var prices = new List<double> {69.99, 49.99, 90.00, 75.00, 39.99, 28.50};
+            var prices = new List<double> { 69.99, 49.99, 90.00, 75.00, 39.99, 28.50 };
 
             for (var i = 0; i < 6; i++)
             {
@@ -27,12 +31,13 @@ namespace AsosCodingStyle.WebApi.Controllers
                 });
             }
 
-            return new Order {Id = 1.ToString(), DateCreated = DateTime.UtcNow, Items = orderItems};
+            return new Order { Id = 1.ToString(), DateCreated = DateTime.UtcNow, Items = orderItems };
         }
 
         [HttpPost]
-        public void Save([FromBody] Order order)
+        public async Task Save([FromBody] Order order)
         {
+            await new OrderRepository().SaveOrder(order);
         }
     }
 }

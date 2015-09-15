@@ -14,6 +14,7 @@ namespace AsosCodingStyle.DataAccess
         private const string EndpointUrl = "https://asos-codingstyle-hackathon.documents.azure.com:443/";
         private const string AuthorizationKey = "vTsjSQ2x2UDKhGFl4dumk/cZ3N8+xv5iM0kdZqU4bwtecYyGhslYxF26fCkCjwL9K/Hf3NzChiiBo6oBPWoFHg==";
         private const string DatabaseId = "hackathon";
+        private const string OrderCollection = "Order";
         private DocumentClient _client;
 
         public async Task<Order> GetOrder(string orderId)
@@ -23,7 +24,7 @@ namespace AsosCodingStyle.DataAccess
                 var dbQuery = _client.CreateDatabaseQuery().Where(c => c.Id == DatabaseId);
                 var database = dbQuery.ToArray().FirstOrDefault() ?? await _client.CreateDatabaseAsync(new Database { Id = DatabaseId });
 
-                var collection = await GetOrCreateCollectionAsync(database, "Order");
+                var collection = await GetOrCreateCollectionAsync(database, OrderCollection);
 
                 return _client.CreateDocumentQuery<Order>(collection.SelfLink).FirstOrDefault(order => order.Id == orderId);
             }
@@ -36,23 +37,18 @@ namespace AsosCodingStyle.DataAccess
                 var dbQuery = _client.CreateDatabaseQuery().Where(c => c.Id == DatabaseId);
                 var database = dbQuery.ToArray().FirstOrDefault() ?? await _client.CreateDatabaseAsync(new Database { Id = DatabaseId });
 
-                var collection = await GetOrCreateCollectionAsync(database, "Order");
+                var collection = await GetOrCreateCollectionAsync(database, OrderCollection);
 
-               var existingOrder =_client.CreateDocumentQuery<Order>(collection.SelfLink).FirstOrDefault(order => order.Id == orderToSave.Id);
-                dynamic doc = _client.CreateDocumentQuery<Document>(collection.SelfLink).Where(d => d.Id == orderToSave.Id).AsEnumerable().FirstOrDefault();
+               var existingOrder = _client.CreateDocumentQuery<Document>(collection.SelfLink).Where(d => d.Id == orderToSave.Id).AsEnumerable().FirstOrDefault();
 
-
-                //if (existingOrder != null)
-                //{
-                //    Document updatedOrder = await _client.ReplaceDocumentAsync();
-                //}
-                //else
-                //{
-                    
-                //}
-
-
-                // return _client.CreateDocumentQuery<Order>(collection.SelfLink).FirstOrDefault(order => order.Id == orderId);
+                if (existingOrder != null)
+                {
+                    await _client.ReplaceDocumentAsync(existingOrder.SelfLink, orderToSave);
+                }
+                else
+                {
+                    Document created = await _client.CreateDocumentAsync(collection.SelfLink, orderToSave);
+                }
             }
 
         }
