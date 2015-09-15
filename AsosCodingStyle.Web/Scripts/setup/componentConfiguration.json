@@ -22,5 +22,17 @@
     "config": {
       "require": "components/testShowEmployees/testShowEmployees"
     }
+  },
+  {
+    "componentName": "order",
+    "config": {
+      "require": "components/order/order"
+    }
+  },
+  {
+    "componentName": "orderItem",
+    "config": {
+      "require": "components/orderItem/orderItem"
+    }
   }
 ]

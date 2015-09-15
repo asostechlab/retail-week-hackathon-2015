@@ -1,0 +1,48 @@
+﻿<div class="order-item">
+    <div class="row">
+        <div class="col-lg-2">
+            <img data-bind="attr: { src: orderItem.Product.ImageUrl }" class="img-responsive" />
+        </div>
+        <div class="col-lg-10">
+            <h3 data-bind="text: orderItem.Product.Description"></h3>
+            <p>
+                <span data-bind="text: getSummary()"></span><br />
+                <span data-bind="text: '£' + orderItem.Price.toFixed(2)"></span>
+            </p>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <button class="btn btn-block btn-success-on-hover">I love it!</button>
+                </div>
+                <div class="col-lg-4">
+                    <button class="btn btn-block btn-warning-on-hover">Return it</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ko if: isShowPositiveFeedback -->
+    <div class="row">
+        <div class="col-lg-3">$nbsp;</div>
+        <!-- ko foreach: positiveFeedback -->
+        <div class="col-lg-2">
+            <button><span data-bind="text: $data"></span></button>
+        </div>
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    <!-- ko if: isShowReturnsFeedback -->
+    <div class="row">
+        <div class="col-lg-1">
+            <!-- ko foreach: returnsFeedback -->
+            <textarea />
+            <!-- /ko -->
+        </div>
+    </div>
+    <!-- ko if: isShowReturnsOtherFeedback -->
+    <div class="row">
+        <div class="col-lg-1">
+            Some other feedback textbox
+        </div>
+    </div>
+    <!-- /ko -->
+    <!-- /ko -->
+</div>

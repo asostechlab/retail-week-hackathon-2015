@@ -16,6 +16,7 @@ declare module AsosCodingStyle.Data {
 		OrderItemId: number;
 		Product: AsosCodingStyle.Data.Product;
 		Quantity: number;
+	    OtherReturnsFeedback: string;
 	}
 	interface Product {
 		ProductId: number;

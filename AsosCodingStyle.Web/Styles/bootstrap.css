@@ -3059,6 +3059,7 @@ a.btn.disabled,
 fieldset[disabled] a.btn {
   pointer-events: none;
 }
+.btn-default-on-hover:hover,
 .btn-default {
   color: #ffffff;
   background-color: #222222;
@@ -3136,6 +3137,7 @@ fieldset[disabled] .btn-default.active {
   background-color: #1967be;
   border-color: #10427b;
 }
+.btn-primary-on-hover:hover,
 .btn-primary:hover {
   color: #ffffff;
   background-color: #1967be;
@@ -3191,6 +3193,7 @@ fieldset[disabled] .btn-primary.active {
   color: #2780e3;
   background-color: #ffffff;
 }
+.btn-success-on-hover:hover,
 .btn-success {
   color: #ffffff;
   background-color: #3fb618;
@@ -3257,6 +3260,7 @@ fieldset[disabled] .btn-success.active {
   color: #3fb618;
   background-color: #ffffff;
 }
+.btn-info-on-hover:hover,
 .btn-info {
   color: #ffffff;
   background-color: #9954bb;
@@ -3323,6 +3327,7 @@ fieldset[disabled] .btn-info.active {
   color: #9954bb;
   background-color: #ffffff;
 }
+.btn-warning-on-hover:hover,
 .btn-warning {
   color: #ffffff;
   background-color: #ff7518;
@@ -3389,6 +3394,7 @@ fieldset[disabled] .btn-warning.active {
   color: #ff7518;
   background-color: #ffffff;
 }
+.btn-danger-on-hover:hover,
 .btn-danger {
   color: #ffffff;
   background-color: #ff0039;
