@@ -1,18 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Net.Http.Formatting;
-using System.Net.Http.Headers;
-
-namespace AsosCodingStyle.WebApi
+﻿namespace AsosCodingStyle.WebApi.Infrastructure.JsonContent
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Net.Http;
+    using System.Net.Http.Formatting;
+    using System.Net.Http.Headers;
+
     public class JsonContentNegotiator : IContentNegotiator
     {
-        private readonly JsonMediaTypeFormatter _jsonFormatter;
+        private readonly JsonMediaTypeFormatter jsonFormatter;
 
         public JsonContentNegotiator(JsonMediaTypeFormatter formatter)
         {
-            _jsonFormatter = formatter;
+            jsonFormatter = formatter;
         }
 
         public ContentNegotiationResult Negotiate(
@@ -21,7 +21,7 @@ namespace AsosCodingStyle.WebApi
             IEnumerable<MediaTypeFormatter> formatters)
         {
             return new ContentNegotiationResult(
-                _jsonFormatter,
+                jsonFormatter,
                 new MediaTypeHeaderValue("application/json"));
         }
     }
