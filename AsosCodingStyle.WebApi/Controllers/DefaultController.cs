@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-
-namespace AsosCodingStyle.WebApi.Controllers
+﻿namespace AsosCodingStyle.WebApi.Controllers
 {
+    using System.Web.Http;
+
     [RoutePrefix("")]
     public class DefaultController : ApiController
     {
         [Route("")]
         public IHttpActionResult Get()
         {
-            return Ok(new { Text = "This is the default endpoint" });
+            return Ok(new {Text = "This is the default endpoint"});
         }
     }
 }

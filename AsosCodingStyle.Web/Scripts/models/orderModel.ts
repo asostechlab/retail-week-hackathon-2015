@@ -8,7 +8,7 @@ export class OrderModel {
     constructor() {
         this.order = {
             DateCreated: new Date(),
-            OrderId: 1,
+            Id: "1",
             Items: [
                 {
                     OrderItemId: 1,

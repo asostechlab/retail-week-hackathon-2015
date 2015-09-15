@@ -66,7 +66,7 @@ namespace AsosCodingStyle.Data.Scraper
                 orderItems.Add(new OrderItem { OrderItemId = i, Product = products[i], Quantity = 1, Price = prices[new Random().Next(5)] });
             }
 
-            var order = new Order { OrderId = 1, DateCreated = DateTime.UtcNow, Items = orderItems };
+            var order = new Order { Id = 1.ToString(), DateCreated = DateTime.UtcNow, Items = orderItems };
 
             using (var data = new StreamWriter(Path.Combine(OutputFolderPath, "Order.txt"), false))
             {

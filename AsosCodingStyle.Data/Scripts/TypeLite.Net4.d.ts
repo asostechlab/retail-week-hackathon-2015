@@ -8,7 +8,7 @@
 
 declare module AsosCodingStyle.Data {
 	interface Order {
-		OrderId: number;
+		Id: string;
 		Items: AsosCodingStyle.Data.OrderItem[];
 		DateCreated: Date;
 	}

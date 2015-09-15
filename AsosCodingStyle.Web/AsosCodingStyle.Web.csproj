@@ -106,6 +106,13 @@
     <TypeScriptCompile Include="Scripts\models\orderModel.ts" />
     <TypeScriptCompile Include="Scripts\models\testModel.ts" />
     <TypeScriptCompile Include="Scripts\models\reasonsModel.ts" />
+    <Content Include="Scripts\libs\bootstrap.js" />
+    <Content Include="Scripts\libs\es6-promise.js" />
+    <Content Include="Scripts\libs\jquery.js" />
+    <Content Include="Scripts\libs\knockout-latest.debug.js" />
+    <Content Include="Scripts\libs\lodash.js" />
+    <Content Include="Scripts\libs\require.js" />
+    <Content Include="Scripts\libs\text.js" />
     <Content Include="Scripts\setup\require.config.js" />
     <Content Include="Scripts\setup\components.js" />
     <Content Include="Scripts\setup\startup.js" />
