@@ -35,11 +35,20 @@ namespace AsosCodingStyle.DataAccess
             using (_client = new DocumentClient(new Uri(EndpointUrl), AuthorizationKey))
             {
                 var dbQuery = _client.CreateDatabaseQuery().Where(c => c.Id == DatabaseId);
-                var database = dbQuery.ToArray().FirstOrDefault() ?? await _client.CreateDatabaseAsync(new Database { Id = DatabaseId });
+                // var database = dbQuery.ToArray().FirstOrDefault() ?? await _client.CreateDatabaseAsync(new Database { Id = DatabaseId });
+                var database = dbQuery.ToArray().FirstOrDefault();
+
+                if (database == null)
+                {
+                    throw new Exception("database is null");
+                }
 
                 var collection = await GetOrCreateCollectionAsync(database, OrderCollection);
 
-               var existingOrder = _client.CreateDocumentQuery<Document>(collection.SelfLink).Where(d => d.Id == orderToSave.Id).AsEnumerable().FirstOrDefault();
+                var existingOrder = _client.CreateDocumentQuery<Document>(collection.SelfLink)
+                    .Where(d => d.Id == orderToSave.Id)
+                    .AsEnumerable()
+                    .FirstOrDefault();
 
                 if (existingOrder != null)
                 {
@@ -49,7 +58,7 @@ namespace AsosCodingStyle.DataAccess
                 {
                     Document created = await _client.CreateDocumentAsync(collection.SelfLink, orderToSave);
                 }
-            }
+             }
 
         }
 

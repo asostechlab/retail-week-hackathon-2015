@@ -35,9 +35,19 @@ namespace AsosCodingStyle.WebApi.Controllers
         }
 
         [HttpPost]
+        [Route("save")]
         public async Task Save([FromBody] Order order)
         {
-            await new OrderRepository().SaveOrder(order);
+            try
+            {
+                await new OrderRepository().SaveOrder(order);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debugger.Break();   
+            }
+            
         }
+
     }
 }
