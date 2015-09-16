@@ -14,6 +14,10 @@ export class OrderModel {
         return OrderApi.instance.getOrder(orderId).then(o => { this.order = o });
     }
     
+    saveOrder(): Promise<void> {
+        return OrderApi.instance.saveOrder(this.order);
+    }
+
     order: Order;
     orderItemsToReturn: KnockoutObservableArray<number>;
 }

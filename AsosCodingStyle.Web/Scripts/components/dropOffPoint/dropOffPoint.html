@@ -1,9 +1,13 @@
 ﻿<h3>Find a drop-off point</h3>
 <div class="row">
-    <div class="col-lg-12">
-        <input type="text" data-bind="textInput: dropOffPointPostcode, event: { keyup: postCodeKeyUp.bind($data) }" placeholder="Enter your postcode" />
-        &nbsp;OR&nbsp;
-        <button data-bind="click: useMyLocation">Use my location</button>
+    <div class="col-lg-5">
+        <input type="text"
+               data-bind="textInput: dropOffPointPostcode, event: { keyup: postCodeKeyUp.bind($data) }, css: { 'btn-success': dropOffPointLocationMethod() === 'PostCodeMethod' }"
+               placeholder="Enter postcode"
+               class="form-control"/>
+        <p class="text-center">OR</p>
+        <button data-bind="click: useMyLocation, css: { 'btn-success': dropOffPointLocationMethod() === 'UseMyLocationMethod' }"
+                class="btn btn-success-on-hover btn-block">Use my location</button>
     </div>
 </div>
 <!-- ko if: dropOffDetails() !== null -->

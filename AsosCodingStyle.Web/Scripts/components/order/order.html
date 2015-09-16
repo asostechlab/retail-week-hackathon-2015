@@ -1,11 +1,12 @@
-﻿<h1>Order items</h1>
-
-<!-- ko ifnot: hasLoaded -->
-<span class="loading"></span>
+﻿<!-- ko ifnot: hasLoaded -->
+<p class="text-center loading-indicator">
+    <i class="fa fa-5x fa-spin fa-spinner"></i>
+</p>
 <!-- /ko-->
 
-<!-- ko if: hasLoaded -->
+<!-- ko if: hasLoaded() && !hasSubmitted() -->
 
+    <h1>Order items</h1>
     <!-- ko foreach: orderItems -->
     <!-- ko component: {name: 'orderItem', params: {data: $data} }--><!-- /ko -->
     <!-- /ko -->
@@ -14,6 +15,25 @@
     <span data-bind="text: returnSummaryText"></span>
 
     <!-- ko component: 'returnsMethod' --><!-- /ko -->
+
     <!-- /ko -->
 
+    <div class="panel panel-default">
+        <div class="panel-heading">Packing Details - Things to check when packing your return:</div>
+        <div class="panel-body">
+            <p class="">Products are in the box</p>
+
+            <p class="">The box is sealed</p>
+
+            <p class="">Blah blah blah</p>
+        </div>
+    </div>
+
+
+    <button data-bind="click: submitRefund" class="btn btn-success">I am done</button>
 <!-- /ko -->
+
+<!-- ko if: hasSubmitted -->
+<div class="loading">Thats it! Thanks for telling us about your returns. </div>
+<!-- /ko-->
+

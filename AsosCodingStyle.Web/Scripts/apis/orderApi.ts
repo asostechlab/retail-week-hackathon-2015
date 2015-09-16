@@ -7,14 +7,15 @@ export class OrderApi {
             type: 'GET'
         });
         return Promise.resolve<Order>(ajaxRequest);
-        //.then(o => {
-        //    console.log(o);
-        //    return o;
-        //})
-        //.catch(o => {
-        //    debugger;
-        //    return o;
-        //});
+    }
+
+    saveOrder(order: Order): Promise<void> {
+        var ajaxRequest = $.ajax('http://asos-coding-style-web-api.azurewebsites.net/customer/orders/save', {
+            type: 'POST',
+            data: JSON.stringify(order),
+            contentType: 'application/json'
+        });
+        return Promise.resolve<void>(ajaxRequest);
     }
 }
 
