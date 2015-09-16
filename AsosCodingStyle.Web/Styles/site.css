@@ -41,6 +41,10 @@ body {
     margin-top: 10px;
 }
 
+.returns-method .drop-off-point {
+    margin-bottom: 20px
+}
+
 .reminder-options label {
     font-weight: normal !important;
 }
