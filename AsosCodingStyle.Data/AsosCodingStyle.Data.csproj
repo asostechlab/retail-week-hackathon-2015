@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Address.cs" />
+    <Compile Include="Notification.cs" />
     <Compile Include="OrderItemFeedbackType.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderItem.cs" />

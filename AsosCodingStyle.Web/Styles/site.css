@@ -1,8 +1,13 @@
-.order-item {
+.order-item,
+.notifications-list {
     border: 4px solid #fafafa;
     background-color: #fcfcfc;
     padding: 10px;
     margin-bottom: 10px;
+}
+
+.notifications-list {
+    padding-left: 30px;
 }
 
 .order-item .feedback-row {
@@ -14,7 +19,7 @@
 }
 
 .order-item .feedback-type-buttons button {
-    font-size: 1.3em;
+    font-size: 1.15em;
 }
 
 .loading-indicator {
@@ -26,7 +31,7 @@
 }
 
 body {
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 
 .returns-method .collection,
@@ -41,6 +46,31 @@ body {
     margin-top: 10px;
 }
 
-.drop-off-details {
-    margin-top: 20px;
+.returns-method .drop-off-point {
+    margin-bottom: 20px
+}
+
+.reminder-options label {
+    font-weight: normal !important;
+}
+
+.drop-off-point-options,
+.collection-options {
+    margin-bottom: 20px;
+}
+
+.submit-button {
+    margin-top: 60px;
+}
+
+.warning-border {
+    border-color: #ff7518 !important;
+}
+
+.success-border {
+    border-color: #3fb618 !important;
+}
+
+.greyed-out-text {
+    color: #cccccc !important;
 }

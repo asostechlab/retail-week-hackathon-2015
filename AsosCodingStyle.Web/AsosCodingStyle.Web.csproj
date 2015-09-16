@@ -175,10 +175,13 @@
     <Content Include="images\ec2a4jj.PNG" />
     <Content Include="images\nw11de.PNG" />
     <Content Include="index.html" />
+    <Content Include="returnscollection.ics" />
     <Content Include="Scripts\components\collection\collection.html" />
     <Content Include="Scripts\components\dropOffPoint\dropOffPoint.html" />
+    <Content Include="Scripts\components\orderItems\orderItems.html" />
     <Content Include="Scripts\components\submitComplete\submitComplete.html" />
     <Content Include="Scripts\components\packingDetails\packingDetails.html" />
+    <Content Include="Scripts\components\notifications\notifications.html" />
     <Content Include="Scripts\components\returnsMethod\returnsMethod.html" />
     <Content Include="Scripts\components\orderItem\orderItem.html" />
     <Content Include="Scripts\components\order\order.html" />
@@ -190,8 +193,10 @@
     <TypeScriptCompile Include="Scripts\apis\testApi.ts" />
     <TypeScriptCompile Include="Scripts\components\collection\collection.ts" />
     <TypeScriptCompile Include="Scripts\components\dropOffPoint\dropOffPoint.ts" />
+    <TypeScriptCompile Include="Scripts\components\orderItems\orderItems.ts" />
     <TypeScriptCompile Include="Scripts\components\submitComplete\submitComplete.ts" />
     <TypeScriptCompile Include="Scripts\components\packingDetails\packingDetails.ts" />
+    <TypeScriptCompile Include="Scripts\components\notifications\notifications.ts" />
     <TypeScriptCompile Include="Scripts\components\returnsMethod\returnsMethod.ts" />
     <TypeScriptCompile Include="Scripts\components\orderItem\orderItem.ts" />
     <TypeScriptCompile Include="Scripts\components\order\order.ts" />
@@ -235,7 +240,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="AsoscodingStyleHub.cs" />
-    <Compile Include="Controllers\NotificationsController.cs" />
+    <Compile Include="Controllers\NotifyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -265,7 +270,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\web.config" />
-    <Content Include="Views\Notifications\Index.cshtml" />
+    <Content Include="Views\Notify\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

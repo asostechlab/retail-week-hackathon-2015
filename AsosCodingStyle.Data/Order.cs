@@ -19,5 +19,7 @@ namespace AsosCodingStyle.Data
         public ReturnCollect ReturnCollect { get; set; }
 
         public Address OrderAddress { get; set; }
+
+        public List<Notification> Notifications { get; set; }
     }
 }

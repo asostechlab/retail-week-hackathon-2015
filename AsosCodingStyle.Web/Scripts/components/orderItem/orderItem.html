@@ -1,19 +1,19 @@
-﻿<div class="order-item">
+﻿<div class="order-item" data-bind="css: { 'success-border': feedbackMethod() === 'POSITIVE', 'warning-border': feedbackMethod() === 'RETURNS' }">
     <div class="row">
-        <div class="col-lg-2">
+        <div class="col-lg-2 col-xs-4">
             <img data-bind="attr: { src: orderItem.Product.ImageUrl }" class="img-responsive product-image" />
         </div>
-        <div class="col-lg-10">
+        <div class="col-lg-10 col-xs-8">
             <h3 data-bind="text: orderItem.Product.Description"></h3>
             <p class="order-item-summary">
                 <span data-bind="text: getSummary()"></span><br />
                 <span data-bind="text: '£' + orderItem.Price.toFixed(2)"></span>
             </p>
             <div class="row feedback-type-buttons">
-                <div class="col-lg-4 col-lg-offset-1">
+                <div class="col-lg-4 col-xs-6 col-lg-offset-1">
                     <button data-bind="click: selectPositiveFeedback, css: { 'btn-success': feedbackMethod() === 'POSITIVE' }" class="btn btn-block btn-success-on-hover">I love it!</button>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-xs-6">
                     <button data-bind="click: selectReturnsFeedback, css: { 'btn-warning': feedbackMethod() === 'RETURNS' }" class="btn btn-block btn-warning-on-hover">Return it</button>
                 </div>
             </div>
@@ -21,9 +21,9 @@
     </div>
     <!-- ko if: isShowPositiveFeedback -->
     <div class="row feedback-row">
-        <div class="col-lg-3"></div>
+        <div class="col-lg-3 hidden-xs"></div>
         <!-- ko foreach: positiveFeedbackTypes -->
-        <div class="col-lg-2 text-success-on-hover text-center" data-bind="click: $parent.toggleFeedbackType.bind($parent), css: { 'text-success': $parent.isFeedbackTypeSelected.call($parent, $data) }">
+        <div class="col-lg-2 col-xs-4 text-success-on-hover text-center" data-bind="click: $parent.toggleFeedbackType.bind($parent), css: { 'text-success': $parent.isFeedbackTypeSelected.call($parent, $data) }">
             <i data-bind="attr: { 'class': 'fa fa-3x fa-' + $data.iconClass }"></i>
             <p data-bind="text: $data.text"></p>
         </div>
@@ -32,9 +32,9 @@
     <!-- /ko -->
     <!-- ko if: isShowReturnsFeedback -->
     <div class="row feedback-row">
-        <div class="col-lg-1"></div>
+        <div class="col-lg-1 hidden-xs"></div>
         <!-- ko foreach: returnReasons -->
-        <div class="col-lg-2 text-warning-on-hover text-center" data-bind="click: $parent.selectReturnReason.bind($parent), css: { 'text-warning': $parent.isReturnReasonSelected.call($parent, $data) }">
+        <div class="col-lg-2 col-xs-4 text-warning-on-hover text-center" data-bind="click: $parent.selectReturnReason.bind($parent), css: { 'text-warning': $parent.isReturnReasonSelected.call($parent, $data) }">
             <i data-bind="attr: { 'class': 'fa fa-3x fa-' + $data.iconClass }"></i>
             <p data-bind="text: $data.text"></p>
         </div>

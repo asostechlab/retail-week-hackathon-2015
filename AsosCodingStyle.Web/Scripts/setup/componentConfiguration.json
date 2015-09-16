@@ -30,6 +30,12 @@
     }
   },
   {
+    "componentName": "orderItems",
+    "config": {
+      "require": "components/orderItems/orderItems"
+    }
+  },
+  {
     "componentName": "orderItem",
     "config": {
       "require": "components/orderItem/orderItem"
@@ -63,6 +69,12 @@
     "componentName": "submitComplete",
     "config": {
       "require": "components/submitComplete/submitComplete"
+    }
+  },
+  {
+    "componentName": "notifications",
+    "config": {
+      "require": "components/notifications/notifications"
     }
   }
 ]

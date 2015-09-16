@@ -2,7 +2,7 @@
 {
     using System.Web.Mvc;
 
-    public class NotificationsController : Controller
+    public class NotifyController : Controller
     {
         // GET: Notifications
         public ActionResult Index()
@@ -12,9 +12,17 @@
 
         public ActionResult SendReturnReceivedMessage()
         {
-            AsosCodingStyleHub.SendMessage("Your return has been received!");
+            AsosCodingStyleHub.SendReturnedPackageReceivedNotification();
 
             return RedirectToAction("Index");
         }
+
+        public ActionResult SendPaymentMadeMessage()
+        {
+            AsosCodingStyleHub.SendPaymentMadeNotification();
+
+            return RedirectToAction("Index");
+        }
+
     }
 }

@@ -14,9 +14,6 @@ export class DropOffPoint {
         this.dropOffDetails = ReturnsMethodModel.instance.dropOffDetails;
         this.isLocationReminderSelected = ko.observable(false);
         this.isTimeReminderSelected = ko.observable(false);
-        this.isCalendarReminderSelected = ko.observable(false);
-        this.isEmailReminderSelected = ko.observable(false);
-        this.isMobileReminderSelected = ko.observable(false);
     }
 
     postCodeKeyUp(d, e): void {
@@ -32,14 +29,11 @@ export class DropOffPoint {
         this.dropOffPointPostcode(null);
     }
 
+    dropOffPointLocationMethod: KnockoutObservable<string>;
     dropOffPointPostcode: KnockoutObservable<string>;
     dropOffDetails: KnockoutObservable<DropOffPointApi.IDropOffPoint>;
     isLocationReminderSelected: KnockoutObservable<boolean>;
     isTimeReminderSelected: KnockoutObservable<boolean>;
-    isCalendarReminderSelected: KnockoutObservable<boolean>;
-    isEmailReminderSelected: KnockoutObservable<boolean>;
-    isMobileReminderSelected: KnockoutObservable<boolean>;
-    dropOffPointLocationMethod: KnockoutObservable<string>;
 }
 
 export {DropOffPoint as viewModel, templateMarkup as template};
