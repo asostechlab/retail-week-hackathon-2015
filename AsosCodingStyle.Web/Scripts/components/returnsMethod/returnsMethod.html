@@ -1,0 +1,29 @@
+﻿<h1>How do you want to return your items?</h1>
+<div class="returns-method drop-off-point">
+    <div class="row">
+        <div class="col-lg-12" data-bind="click: selectDropOffPoint">
+            ICON - Drop Off Point
+        </div>
+    </div>
+    <!-- ko if: isDropOffPointSelected -->
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- ko component: 'dropOffPoint' --><!-- /ko -->
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
+<div class="returns-method collection">
+    <div class="row">
+        <div class="col-lg-12" data-bind="click: selectCollection">
+            ICON - Collection
+        </div>
+    </div>
+    <!-- ko if: isCollectionSelected -->
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- ko component: 'collection' --><!-- /ko -->
+        </div>
+    </div>
+    <!-- /ko -->
+</div>

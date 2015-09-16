@@ -34,5 +34,23 @@
     "config": {
       "require": "components/orderItem/orderItem"
     }
+  },
+  {
+    "componentName": "returnsMethod",
+    "config": {
+      "require": "components/returnsMethod/returnsMethod"
+    }
+  },
+  {
+    "componentName": "collection",
+    "config": {
+      "require": "components/collection/collection"
+    }
+  },
+  {
+    "componentName": "dropOffPoint",
+    "config": {
+      "require": "components/dropOffPoint/dropOffPoint"
+    }
   }
 ]

@@ -14,8 +14,9 @@ export class Order {
         return OrderModel.instance.orderItemsToReturn().length > 0;
     }
 
-    private computeReturnSummaryText():string {
-        return `Returning ${OrderModel.instance.orderItemsToReturn().length} items`;
+    private computeReturnSummaryText(): string {
+        var numberOfItemsBeingReturned = OrderModel.instance.orderItemsToReturn().length;
+        return `Returning ${numberOfItemsBeingReturned} item${numberOfItemsBeingReturned > 1 ? 's' : ''}`;
     }
 
     orderItems: AsosCodingStyle.Data.OrderItem[];
