@@ -7,14 +7,6 @@ export class OrderModel {
 
     // todo: implement the get method with a loading indicator
     constructor() {
-        this.order = {
-            DateCreated: new Date(),
-            Id: "1",
-            Items: [
-
-            ]
-        };
-
         this.orderItemsToReturn = ko.observableArray([]);
     }
 
