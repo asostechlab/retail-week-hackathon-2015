@@ -88,6 +88,8 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="images\ec2a4jj.PNG" />
+    <Content Include="images\nw11de.PNG" />
     <Content Include="index.html" />
     <Content Include="Scripts\components\collection\collection.html" />
     <Content Include="Scripts\components\dropOffPoint\dropOffPoint.html" />
@@ -97,6 +99,7 @@
     <Content Include="Scripts\components\testShowEmployees\testShowEmployees.html" />
     <Content Include="Scripts\components\testAddEmployee\testAddEmployee.html" />
     <Content Include="Scripts\components\testApp\testApp.html" />
+    <TypeScriptCompile Include="Scripts\apis\dropOffPointApi.ts" />
     <TypeScriptCompile Include="Scripts\apis\testApi.ts" />
     <TypeScriptCompile Include="Scripts\components\collection\collection.ts" />
     <TypeScriptCompile Include="Scripts\components\dropOffPoint\dropOffPoint.ts" />
