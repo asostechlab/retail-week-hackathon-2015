@@ -2,7 +2,7 @@
 <div class="returns-method">
     <div class="row">
         <div class="col-lg-6">
-            <div class="drop-off-point">
+            <div class="drop-off-point" data-bind="css: {'success-border': isDropOffPointSelected, 'greyed-out-text': isCollectionSelected}">
                 <div class="row text-success-on-hover" data-bind="click: selectDropOffPoint, css: {'text-success': isDropOffPointSelected}">
                     <div class="col-lg-2 col-lg-offset-2 returns-method-icon">
                         <i class="fa fa-3x fa-building"></i>
@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="col-lg-6">
-            <div class="collection">
+            <div class="collection" data-bind="css: {'success-border': isCollectionSelected, 'greyed-out-text': isDropOffPointSelected}">
                 <div class="row text-success-on-hover" data-bind="click: selectCollection, css: {'text-success': isCollectionSelected}">
                     <div class="col-lg-2 col-lg-offset-2 returns-method-icon">
                         <i class="fa fa-3x fa-automobile"></i>

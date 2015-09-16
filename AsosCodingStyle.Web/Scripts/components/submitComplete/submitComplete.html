@@ -1,2 +1,8 @@
 ﻿<h1>Thanks</h1>
-<h5>We've received your request...</h5>
+<!-- ko if: isReturningItems -->
+<h4>We've received your returns request.</h4>
+<!-- ko component: 'packingDetails' --><!-- /ko -->
+<!-- /ko -->
+<!-- ko ifnot: isReturningItems -->
+<h4>We've received your feedback. This will help us to give you better advice when buying in the future.</h4>
+<!-- /ko -->

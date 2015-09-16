@@ -30,6 +30,12 @@
     }
   },
   {
+    "componentName": "orderItems",
+    "config": {
+      "require": "components/orderItems/orderItems"
+    }
+  },
+  {
     "componentName": "orderItem",
     "config": {
       "require": "components/orderItem/orderItem"

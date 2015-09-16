@@ -5,26 +5,22 @@
 <!-- /ko-->
 
 <!-- ko if: isShowOrderItems -->
-    <h1>Order items</h1>
-    <!-- ko foreach: orderItems -->
-    <!-- ko component: {name: 'orderItem', params: {data: $data} }--><!-- /ko -->
-    <!-- /ko -->
+    <!-- ko component: 'orderItems' --><!-- /ko -->
 
     <!-- ko if: isReturningItems -->
     <span data-bind="text: returnSummaryText"></span>
     <!-- ko component: 'returnsMethod' --><!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko if: hasSelectedReturnsMethod -->
-    <!-- ko component: 'packingDetails' --><!-- /ko -->
-    <!-- /ko -->
-
     <!-- ko if: isShowSubmitButton -->
-    <button data-bind="click: submit" class="btn btn-success">Submit</button>
+    <div class="row submit-button">
+        <div class="col-lg-4 col-lg-offset-4">
+            <button data-bind="click: submit" class="btn btn-warning btn-lg btn-block">Submit</button>
+        </div>
+    </div>
     <!-- /ko -->
 <!-- /ko -->
 
 <!-- ko if: hasSubmitted -->
     <!-- ko component: 'submitComplete' --><!-- /ko -->
 <!-- /ko-->
-

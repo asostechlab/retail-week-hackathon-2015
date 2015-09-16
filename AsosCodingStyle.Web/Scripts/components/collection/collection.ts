@@ -16,11 +16,6 @@ export class Collection {
         this.addressLine2 = ReturnsMethodModel.instance.addressLine2;
         this.city = ReturnsMethodModel.instance.city;
         this.postCode = ReturnsMethodModel.instance.postCode;
-        this.isCalendarReminderSelected = ko.observable(false);
-        this.isEmailReminderSelected = ko.observable(false);
-        this.isMobileReminderSelected = ko.observable(false);
-
-        // todo, store the reminder settings on the model
 
         // Computeds for the view
         this.isShowAddressEntry = ko.pureComputed(this.computeIsShowAddressEntry, this);
@@ -51,6 +46,10 @@ export class Collection {
         }
     }
 
+    addToCalendar(): void {
+        console.error('not implemented...');
+    }
+
     private computeIsShowAddressEntry(): boolean {
         return this.collectionMethod() === this.EnterANewAddress;
     }
@@ -62,12 +61,7 @@ export class Collection {
             this.city(),
             this.postCode()
         ];
-        var formattedAddress = _.filter(lines, l => !!l).join(', ');
-        if (formattedAddress) {
-            return 'Your items will be collected from ' + formattedAddress;
-        } else {
-            return '';
-        }
+        return _.filter(lines, l => !!l).join(', ');
     }
 
     private clearCollectionMethod(): void {
@@ -95,9 +89,6 @@ export class Collection {
     city: KnockoutObservable<string>;
     postCode: KnockoutObservable<string>;
     isShowAddressEntry: KnockoutComputed<boolean>;
-    isCalendarReminderSelected: KnockoutObservable<boolean>;
-    isEmailReminderSelected: KnockoutObservable<boolean>;
-    isMobileReminderSelected: KnockoutObservable<boolean>;
     addressSummary: KnockoutComputed<string>;
 }
 

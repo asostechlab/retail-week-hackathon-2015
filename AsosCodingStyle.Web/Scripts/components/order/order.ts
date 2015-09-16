@@ -11,7 +11,6 @@ export class Order {
         this.isSubmitting = ko.observable(false);
         const orderIdToLoad = "1"; // consider picking this up off the URL
         OrderModel.instance.retrieveOrder(orderIdToLoad).then(() => {
-            this.orderItems = OrderModel.instance.order.Items;
             this.isLoading(false);
         });
 
@@ -66,7 +65,6 @@ export class Order {
         return ReturnsMethodModel.instance.addressLine1() !== null && ReturnsMethodModel.instance.postCode() !== null;
     }
 
-    orderItems: AsosCodingStyle.Data.OrderItem[];
     isReturningItems: KnockoutComputed<boolean>;
     returnSummaryText: KnockoutComputed<string>;
     isLoading: KnockoutObservable<boolean>;

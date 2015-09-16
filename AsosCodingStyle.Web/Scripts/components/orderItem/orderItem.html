@@ -1,4 +1,4 @@
-﻿<div class="order-item">
+﻿<div class="order-item" data-bind="css: { 'success-border': feedbackMethod() === 'POSITIVE', 'warning-border': feedbackMethod() === 'RETURNS' }">
     <div class="row">
         <div class="col-lg-2">
             <img data-bind="attr: { src: orderItem.Product.ImageUrl }" class="img-responsive product-image" />
