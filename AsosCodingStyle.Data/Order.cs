@@ -15,5 +15,9 @@ namespace AsosCodingStyle.Data
         public List<OrderItem> Items { get; set; }
 
         public DateTime DateCreated { get; set; }
+
+        public ReturnCollect ReturnCollect { get; set; }
+
+        public Address OrderAddress { get; set; }
     }
 }

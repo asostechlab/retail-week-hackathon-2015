@@ -21,13 +21,13 @@ export class OrderItem {
 
         // Writing the data back to the model as the user interacts with it...
         this.feedbackMethod.subscribe(newValue => {
-            if (newValue === this.PositiveFeedbackType) {
+            if (newValue !== this.ReturnsFeedbackType) {
                 OrderModel.instance.orderItemsToReturn.remove(this.orderItem.OrderItemId);
             } else {
                 OrderModel.instance.orderItemsToReturn.push(this.orderItem.OrderItemId);
             }
         });
-        this.feedbackTypes.subscribe(newValue => this.orderItem.FeedbackTypes);
+        this.feedbackTypes.subscribe(newValue => this.orderItem.FeedbackTypes = newValue);
         this.returnReason.subscribe(newValue => this.orderItem.Return.Reason = newValue);
         this.otherReturnReasonText.subscribe(newValue => this.orderItem.Return.ExtraInformation = newValue);
 
@@ -45,15 +45,23 @@ export class OrderItem {
         return `Colour: ${this.orderItem.Product.Colour}, Size: ${this.orderItem.Product.Size}, Quantity: ${this.orderItem.Quantity}`;
     }
 
-    selectPositiveFeedback():void {
-        this.feedbackMethod(this.PositiveFeedbackType);
-        this.returnReason(null);
-        this.otherReturnReasonText(null);
+    selectPositiveFeedback(): void {
+        if (this.feedbackMethod() === this.PositiveFeedbackType) {
+            this.clearFeedbackMethod();
+        } else {
+            this.feedbackMethod(this.PositiveFeedbackType);
+            this.returnReason(null);
+            this.otherReturnReasonText(null);
+        }
     }
 
     selectReturnsFeedback(): void {
-        this.feedbackMethod(this.ReturnsFeedbackType);
-        this.feedbackTypes([]);
+        if (this.feedbackMethod() === this.ReturnsFeedbackType) {
+            this.clearFeedbackMethod();
+        } else {
+            this.feedbackMethod(this.ReturnsFeedbackType);
+            this.feedbackTypes([]);
+        }
     }
 
     toggleFeedbackType(feedbackType: ReasonsModel.IFeedbackType): void {
@@ -89,6 +97,13 @@ export class OrderItem {
 
     private computeIsShowReturnsOtherFeedback(): boolean {
         return this.returnReason() === AsosCodingStyle.Data.ReturnReasonType.Other;
+    }
+
+    private clearFeedbackMethod(): void {
+        this.feedbackMethod(null);
+        this.feedbackTypes([]);
+        this.returnReason(null);
+        this.otherReturnReasonText(null);
     }
 
     orderItem: AsosCodingStyle.Data.OrderItem;

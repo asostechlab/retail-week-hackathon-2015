@@ -52,11 +52,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Address.cs" />
     <Compile Include="OrderItemFeedbackType.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderItem.cs" />
     <Compile Include="OrderItemFeedback.cs" />
     <Compile Include="OrderItemReturn.cs" />
+    <Compile Include="ReturnCollect.cs" />
     <Compile Include="ReturnReasonType.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
