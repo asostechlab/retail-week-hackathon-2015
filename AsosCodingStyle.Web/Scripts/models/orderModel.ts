@@ -5,9 +5,9 @@ import OrderApi = require("../apis/orderApi");
 
 export class OrderModel {
 
-    // todo: implement the get method with a loading indicator
     constructor() {
         this.orderItemsToReturn = ko.observableArray([]);
+        this.orderItemsForFeedback = ko.observableArray([]);
     }
 
     retrieveOrder(orderId: string): Promise<void> {
@@ -20,6 +20,7 @@ export class OrderModel {
 
     order: Order;
     orderItemsToReturn: KnockoutObservableArray<number>;
+    orderItemsForFeedback: KnockoutObservableArray<number>;
 }
 
 var instance = new OrderModel();

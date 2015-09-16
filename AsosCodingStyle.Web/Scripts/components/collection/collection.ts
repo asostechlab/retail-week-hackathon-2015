@@ -1,6 +1,7 @@
 ﻿import templateMarkup = require('text!./collection.html');
 import ko = require('knockout');
 import OrderModel = require("../../models/orderModel");
+import ReturnsMethodModel = require("../../models/returnsMethodModel")
 
 export class Collection {
 
@@ -9,22 +10,15 @@ export class Collection {
 
     constructor() {
         // Local observables
-        this.collectionDate = ko.observable(null);
         this.collectionMethod = ko.observable(null);
-        this.addressLine1 = ko.observable(null);
-        this.addressLine2 = ko.observable(null);
-        this.city = ko.observable(null);
-        this.postCode = ko.observable(null);
+        this.collectionDate = ReturnsMethodModel.instance.collectionDate;
+        this.addressLine1 = ReturnsMethodModel.instance.addressLine1;
+        this.addressLine2 = ReturnsMethodModel.instance.addressLine2;
+        this.city = ReturnsMethodModel.instance.city;
+        this.postCode = ReturnsMethodModel.instance.postCode;
         this.isCalendarReminderSelected = ko.observable(false);
         this.isEmailReminderSelected = ko.observable(false);
         this.isMobileReminderSelected = ko.observable(false);
-
-        // Subscriptions to keep the model up to date
-        this.collectionDate.subscribe(newValue => OrderModel.instance.order.ReturnCollect.Date = new Date(newValue));
-        this.addressLine1.subscribe(newValue => OrderModel.instance.order.ReturnCollect.Address.AddressLine1 = newValue);
-        this.addressLine2.subscribe(newValue => OrderModel.instance.order.ReturnCollect.Address.AddressLine2 = newValue);
-        this.city.subscribe(newValue => OrderModel.instance.order.ReturnCollect.Address.City = newValue);
-        this.postCode.subscribe(newValue => OrderModel.instance.order.ReturnCollect.Address.PostCode = newValue);
 
         // todo, store the reminder settings on the model
 
@@ -37,6 +31,7 @@ export class Collection {
         if (this.collectionMethod() === this.UseDeliveryAddress) {
             this.clearCollectionMethod();
         } else {
+            this.clearCollectionMethod();
             this.setupEmptyAddressOnModel();
             this.addressLine1(OrderModel.instance.order.OrderAddress.AddressLine1);
             this.addressLine2(OrderModel.instance.order.OrderAddress.AddressLine2);
@@ -50,6 +45,7 @@ export class Collection {
         if (this.collectionMethod() === this.EnterANewAddress) {
             this.clearCollectionMethod();
         } else {
+            this.clearCollectionMethod();
             this.setupEmptyAddressOnModel();
             this.collectionMethod(this.EnterANewAddress);
         }
@@ -92,13 +88,13 @@ export class Collection {
         };
     }
 
-    collectionDate: KnockoutObservable<string>;
     collectionMethod: KnockoutObservable<string>;
-    isShowAddressEntry: KnockoutComputed<boolean>;
+    collectionDate: KnockoutObservable<string>;
     addressLine1: KnockoutObservable<string>;
     addressLine2: KnockoutObservable<string>;
     city: KnockoutObservable<string>;
     postCode: KnockoutObservable<string>;
+    isShowAddressEntry: KnockoutComputed<boolean>;
     isCalendarReminderSelected: KnockoutObservable<boolean>;
     isEmailReminderSelected: KnockoutObservable<boolean>;
     isMobileReminderSelected: KnockoutObservable<boolean>;

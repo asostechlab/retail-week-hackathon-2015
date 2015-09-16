@@ -102,6 +102,8 @@
     <Content Include="index.html" />
     <Content Include="Scripts\components\collection\collection.html" />
     <Content Include="Scripts\components\dropOffPoint\dropOffPoint.html" />
+    <Content Include="Scripts\components\submitComplete\submitComplete.html" />
+    <Content Include="Scripts\components\packingDetails\packingDetails.html" />
     <Content Include="Scripts\components\returnsMethod\returnsMethod.html" />
     <Content Include="Scripts\components\orderItem\orderItem.html" />
     <Content Include="Scripts\components\order\order.html" />
@@ -113,6 +115,8 @@
     <TypeScriptCompile Include="Scripts\apis\testApi.ts" />
     <TypeScriptCompile Include="Scripts\components\collection\collection.ts" />
     <TypeScriptCompile Include="Scripts\components\dropOffPoint\dropOffPoint.ts" />
+    <TypeScriptCompile Include="Scripts\components\submitComplete\submitComplete.ts" />
+    <TypeScriptCompile Include="Scripts\components\packingDetails\packingDetails.ts" />
     <TypeScriptCompile Include="Scripts\components\returnsMethod\returnsMethod.ts" />
     <TypeScriptCompile Include="Scripts\components\orderItem\orderItem.ts" />
     <TypeScriptCompile Include="Scripts\components\order\order.ts" />
@@ -124,6 +128,7 @@
     <TypeScriptCompile Include="Scripts\Enums.ts">
       <DependentUpon>TypeLite.Net4.tt</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Scripts\models\returnsMethodModel.ts" />
     <TypeScriptCompile Include="Scripts\models\orderModel.ts" />
     <TypeScriptCompile Include="Scripts\models\testModel.ts" />
     <TypeScriptCompile Include="Scripts\models\reasonsModel.ts" />

@@ -1,11 +1,10 @@
-﻿<!-- ko ifnot: hasLoaded -->
+﻿<!-- ko if: isLoading() || isSubmitting() -->
 <p class="text-center loading-indicator">
     <i class="fa fa-5x fa-spin fa-spinner"></i>
 </p>
 <!-- /ko-->
 
-<!-- ko if: hasLoaded() && !hasSubmitted() -->
-
+<!-- ko if: isShowOrderItems -->
     <h1>Order items</h1>
     <!-- ko foreach: orderItems -->
     <!-- ko component: {name: 'orderItem', params: {data: $data} }--><!-- /ko -->
@@ -13,27 +12,19 @@
 
     <!-- ko if: isReturningItems -->
     <span data-bind="text: returnSummaryText"></span>
-
     <!-- ko component: 'returnsMethod' --><!-- /ko -->
-
     <!-- /ko -->
 
-    <div class="panel panel-default">
-        <div class="panel-heading">Packing Details - Things to check when packing your return:</div>
-        <div class="panel-body">
-            <p class="">Products are in the box</p>
+    <!-- ko if: hasSelectedReturnsMethod -->
+    <!-- ko component: 'packingDetails' --><!-- /ko -->
+    <!-- /ko -->
 
-            <p class="">The box is sealed</p>
-
-            <p class="">Blah blah blah</p>
-        </div>
-    </div>
-
-
-    <button data-bind="click: submitRefund" class="btn btn-success">I am done</button>
+    <!-- ko if: isShowSubmitButton -->
+    <button data-bind="click: submit" class="btn btn-success">Submit</button>
+    <!-- /ko -->
 <!-- /ko -->
 
 <!-- ko if: hasSubmitted -->
-<div class="loading">Thats it! Thanks for telling us about your returns. </div>
+    <!-- ko component: 'submitComplete' --><!-- /ko -->
 <!-- /ko-->
 

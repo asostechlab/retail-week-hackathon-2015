@@ -26,6 +26,12 @@ export class OrderItem {
             } else {
                 OrderModel.instance.orderItemsToReturn.push(this.orderItem.OrderItemId);
             }
+
+            if (newValue !== this.PositiveFeedbackType) {
+                OrderModel.instance.orderItemsForFeedback.remove(this.orderItem.OrderItemId);
+            } else {
+                OrderModel.instance.orderItemsForFeedback.push(this.orderItem.OrderItemId);
+            }
         });
         this.feedbackTypes.subscribe(newValue => this.orderItem.FeedbackTypes = newValue);
         this.returnReason.subscribe(newValue => this.orderItem.Return = { Reason: newValue, ExtraInformation: null });
