@@ -56,7 +56,10 @@ export class Order {
         if (ReturnsMethodModel.instance.selectedReturnsMethod() === ReturnsMethodModel.ReturnMethodType.Collection) {
             return ReturnsMethodModel.instance.collectionDate() !== null && this.hasCollectionAddress();
         }
-        return ReturnsMethodModel.instance.selectedReturnsMethod() !== null;
+        if (ReturnsMethodModel.instance.selectedReturnsMethod() === ReturnsMethodModel.ReturnMethodType.DropOffPoint) {
+            return ReturnsMethodModel.instance.dropOffDetails() !== null;
+        }
+        return false;
     }
 
     private hasCollectionAddress(): boolean {
