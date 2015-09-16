@@ -25,7 +25,7 @@ export class OrderModel {
                     Return: {
                         ExtraInformation: null,
                         Reason: null
-                    }
+                    },
                 },
                 {
                     OrderItemId: 2,
@@ -44,7 +44,14 @@ export class OrderModel {
                         Reason: null
                     }
                 }
-            ]
+            ],
+            OrderAddress: {
+                AddressLine1: 'Etc Venues',
+                AddressLine2: '155 Bishopsgate',
+                City: 'London',
+                PostCode: 'EC2M 3YD'
+            },
+            ReturnCollect: null
         };
 
         this.orderItemsToReturn = ko.observableArray([]);
