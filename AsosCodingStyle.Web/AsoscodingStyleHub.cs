@@ -16,7 +16,7 @@ namespace AsosCodingStyle.Web
                  Message = message, DateTime = DateTime.Now
             });
 
-            // Notifications.Notifications.Instance.Send(message).Wait();
+            Notifications.Notifications.Instance.Send(message).Wait();
         }
 
         public static void SendPaymentMadeNotification()
@@ -27,7 +27,7 @@ namespace AsosCodingStyle.Web
                  Message = message, DateTime = DateTime.Now
             });
 
-            // Notifications.Notifications.Instance.Send(message).Wait();
+            Notifications.Notifications.Instance.Send(message).Wait();
         }
 
         private static IHubContext GetHubContext()
