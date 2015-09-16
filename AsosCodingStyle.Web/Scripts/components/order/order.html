@@ -1,19 +1,24 @@
-﻿<h1>Order items</h1>
+﻿
 
 <!-- ko ifnot: hasLoaded -->
 <span class="loading"></span>
 <!-- /ko-->
 
-<!-- ko if: hasLoaded -->
-
+<!-- ko if: hasLoaded() && !hasSubmitted() -->
+<h1>Order items</h1>
     <!-- ko foreach: orderItems -->
     <!-- ko component: {name: 'orderItem', params: {data: $data} }--><!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko if: isReturningItems -->
+    <!-- ko if: isReturningItems-->
     <span data-bind="text: returnSummaryText"></span>
 
     <!-- ko component: 'returnsMethod' --><!-- /ko -->
     <!-- /ko -->
 
+    <button data-bind="click: submitRefund" class="btn btn-success">I am done</button>
 <!-- /ko -->
+
+<!-- ko if: hasSubmitted -->
+<div class="loading">Thats it! Thanks for telling us about your returns. </div>
+<!-- /ko-->
