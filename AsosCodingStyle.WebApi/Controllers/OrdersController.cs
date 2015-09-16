@@ -4,6 +4,7 @@
     using System.Web.Http;
     using Data;
     using DataAccess;
+    using Notifications;
 
     [RoutePrefix("customer/orders")]
     public class OrdersController : ApiController
@@ -20,6 +21,8 @@
         public async Task Save([FromBody] Order order)
         {
             await new OrderRepository().SaveOrder(order);
+
+            await Notifications.Instance.Send("Your order has been updated. (Order Id: " + order.Id + ")");
         }
     }
 }
