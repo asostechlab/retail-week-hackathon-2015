@@ -1,5 +1,11 @@
 ﻿<h1>Order items</h1>
 
+<!-- ko ifnot: hasLoaded -->
+<span class="loading"></span>
+<!-- /ko-->
+
+<!-- ko if: hasLoaded -->
+
 <!-- ko foreach: orderItems -->
 <!-- ko component: {name: 'orderItem', params: {data: $data} }--><!-- /ko -->
 <!-- /ko -->
@@ -11,4 +17,8 @@
 
 <!-- /ko -->
 
+<!-- /ko -->
+
 <!-- ko component: 'packingHelper' --><!-- /ko -->
+
+

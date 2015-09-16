@@ -58,5 +58,11 @@
     "config": {
       "require": "components/packingHelper/packingHelper"
     }
+  },
+  {
+    "componentName": "googleMap",
+    "config": {
+      "require": "components/googleMap/googleMap"
+    }
   }
 ]

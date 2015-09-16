@@ -7,9 +7,9 @@ export class TestApi {
             method: 'GET',
             dataType: 'application/json'
         });
-        return Promise.resolve<EmployeeRecord[]>(ajaxRequest);
+        return Promise.resolve<EmployeeRecord[]>(<any>ajaxRequest);
     }
 }
 
 var instance = new TestApi();
-export {instance};
+export {instance}

@@ -5,7 +5,13 @@ import OrderModel = require("../../models/orderModel")
 export class Order {
 
     constructor() {
-        this.orderItems = OrderModel.instance.order.Items;
+        this.hasLoaded = ko.observable(false);
+        const orderIdToLoad = "1"; // consider picking this up off the URL
+        OrderModel.instance.retrieveOrder(orderIdToLoad).then(() => {
+            this.orderItems = OrderModel.instance.order.Items;
+            this.hasLoaded(true);       
+        });
+
         this.isReturningItems = ko.pureComputed(this.computeIsReturningItems, this);
         this.returnSummaryText = ko.pureComputed(this.computeReturnSummaryText, this);
     }
@@ -18,10 +24,11 @@ export class Order {
         var numberOfItemsBeingReturned = OrderModel.instance.orderItemsToReturn().length;
         return `Returning ${numberOfItemsBeingReturned} item${numberOfItemsBeingReturned > 1 ? 's' : ''}`;
     }
-
+    
     orderItems: AsosCodingStyle.Data.OrderItem[];
     isReturningItems: KnockoutComputed<boolean>;
     returnSummaryText: KnockoutComputed<string>;
+    hasLoaded: KnockoutObservable<boolean>;
 }
 
 export {Order as viewModel, templateMarkup as template};
