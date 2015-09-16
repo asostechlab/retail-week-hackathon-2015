@@ -52,5 +52,11 @@
     "config": {
       "require": "components/dropOffPoint/dropOffPoint"
     }
+  },
+  {
+    "componentName": "packingHelper",
+    "config": {
+      "require": "components/packingHelper/packingHelper"
+    }
   }
 ]
