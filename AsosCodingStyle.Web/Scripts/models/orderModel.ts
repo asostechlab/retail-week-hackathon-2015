@@ -1,7 +1,6 @@
 ﻿/// <reference path="../../../AsosCodingStyle.Data/Scripts/TypeLite.Net4.d.ts" />
 import ko = require('knockout');
 import Order = AsosCodingStyle.Data.Order;
-import Notification = AsosCodingStyle.Data.Notification;
 import OrderApi = require("../apis/orderApi");
 
 export class OrderModel {
@@ -22,10 +21,6 @@ export class OrderModel {
     
     saveOrder(): Promise<void> {
         return OrderApi.instance.saveOrder(this.order);
-    }
-
-    addNotification(notification: Notification): void {
-        this.notifications.push(notification);
     }
 
     order: Order;

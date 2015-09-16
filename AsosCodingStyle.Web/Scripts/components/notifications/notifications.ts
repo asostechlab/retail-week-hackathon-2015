@@ -6,33 +6,23 @@ import OrderModel = require("../../models/orderModel")
 export class Notification {
 
     constructor() {
-        this.hasNotifications = ko.pureComputed(this.computeHasNotifications, this);
         this.notificationList = ko.pureComputed(this.computeNotificationList, this);
 
-        let signalRConnection = (<any>$).connection;
-
+        var signalRConnection = (<any>$).connection;
         var chat = signalRConnection.asosCodingStyleHub;
 
-        chat.client.returnedPackageReceived = notification => {
-            console.log(notification);
-            OrderModel.instance.addNotification(notification);
-        };
-
-        chat.client.SendPaymentMadeNotification = notification => {
-            console.log(notification);
-            OrderModel.instance.addNotification(notification);
-        };
+        chat.client.returnedPackageReceived = notification => this.handleNotification(notification);
+        chat.client.SendPaymentMadeNotification = notification => this.handleNotification(notification);
 
         signalRConnection.hub.start();
-
-    }
-
-    private computeHasNotifications(): boolean {
-        return OrderModel.instance.notifications().length > 0;
     }
 
     private computeNotificationList(): AsosCodingStyle.Data.Notification[] {
         return OrderModel.instance.notifications();
+    }
+
+    private handleNotification(notification): void {
+        OrderModel.instance.notifications.push(notification);
     }
 
     hasNotifications: KnockoutObservable<boolean>;
