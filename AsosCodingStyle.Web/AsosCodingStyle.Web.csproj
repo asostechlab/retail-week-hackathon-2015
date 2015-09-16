@@ -97,6 +97,7 @@
     <Content Include="Scripts\components\testShowEmployees\testShowEmployees.html" />
     <Content Include="Scripts\components\testAddEmployee\testAddEmployee.html" />
     <Content Include="Scripts\components\testApp\testApp.html" />
+    <TypeScriptCompile Include="Scripts\apis\orderApi.ts" />
     <TypeScriptCompile Include="Scripts\apis\testApi.ts" />
     <TypeScriptCompile Include="Scripts\components\collection\collection.ts" />
     <TypeScriptCompile Include="Scripts\components\dropOffPoint\dropOffPoint.ts" />
