@@ -52,5 +52,11 @@
     "config": {
       "require": "components/dropOffPoint/dropOffPoint"
     }
+  },
+  {
+    "componentName": "notifications",
+    "config": {
+      "require": "components/notifications/notifications"
+    }
   }
 ]

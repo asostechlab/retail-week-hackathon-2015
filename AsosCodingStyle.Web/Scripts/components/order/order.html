@@ -14,11 +14,13 @@
     <!-- ko if: isReturningItems -->
     <span data-bind="text: returnSummaryText"></span>
 
-    <!-- ko component: 'returnsMethod' --><!-- /ko -->
+        <!-- ko component: 'returnsMethod' --><!-- /ko -->
 
     <!-- /ko -->
 
-    <div class="panel panel-default">
+    <!-- ko component: 'notifications' --><!-- /ko -->
+
+<div class="panel panel-default">
         <div class="panel-heading">Packing Details - Things to check when packing your return:</div>
         <div class="panel-body">
             <p class="">Products are in the box</p>
