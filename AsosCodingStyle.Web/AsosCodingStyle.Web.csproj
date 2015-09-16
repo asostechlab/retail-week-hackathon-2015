@@ -42,6 +42,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Asos.Common.Address.Web.Api.Client">
+      <HintPath>..\lib\Asos.Identity.PostalCode.HttpClient.1.0.15203.2\lib\net40\Asos.Common.Address.Web.Api.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Asos.Framework">
+      <HintPath>..\lib\Asos.Identity.Core.Framework.1.0.15250.3\lib\net40\Asos.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Asos.Identity.Http.Client">
+      <HintPath>..\lib\Asos.Identity.Http.Client.1.0.15203.1\lib\net40\Asos.Identity.Http.Client.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
