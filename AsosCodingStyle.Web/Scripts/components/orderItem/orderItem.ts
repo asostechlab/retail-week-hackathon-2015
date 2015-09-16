@@ -28,7 +28,7 @@ export class OrderItem {
             }
         });
         this.feedbackTypes.subscribe(newValue => this.orderItem.FeedbackTypes = newValue);
-        this.returnReason.subscribe(newValue => this.orderItem.Return.Reason = newValue);
+        this.returnReason.subscribe(newValue => this.orderItem.Return = { Reason: newValue, ExtraInformation: null });
         this.otherReturnReasonText.subscribe(newValue => this.orderItem.Return.ExtraInformation = newValue);
 
         // Computeds for the view
@@ -50,8 +50,8 @@ export class OrderItem {
             this.clearFeedbackMethod();
         } else {
             this.feedbackMethod(this.PositiveFeedbackType);
-            this.returnReason(null);
             this.otherReturnReasonText(null);
+            this.returnReason(null);
         }
     }
 

@@ -1,5 +1,6 @@
 ﻿import templateMarkup = require('text!./returnsMethod.html');
 import ko = require('knockout');
+import OrderModel = require("../../models/orderModel");
 
 export class ReturnsMethod {
     private DropOffPoint = 'DropOffPoint';
@@ -13,10 +14,15 @@ export class ReturnsMethod {
 
     selectDropOffPoint(): void {
         this.selectedReturnsMethod(this.DropOffPoint);
+        OrderModel.instance.order.ReturnCollect = null;
     }
 
     selectCollection(): void {
         this.selectedReturnsMethod(this.Collection);
+        OrderModel.instance.order.ReturnCollect = {
+            Address: null,
+            Date: null
+        };
     }
 
     computeIsDropOffPointSelected(): boolean {
