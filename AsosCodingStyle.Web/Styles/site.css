@@ -26,7 +26,7 @@
 }
 
 body {
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 
 .returns-method .collection,
@@ -39,4 +39,29 @@ body {
 .returns-method .collection h3,
 .returns-method .drop-off-point h3 {
     margin-top: 10px;
+}
+
+.reminder-options label {
+    font-weight: normal !important;
+}
+
+.drop-off-point-options,
+.collection-options {
+    margin-bottom: 20px;
+}
+
+.submit-button {
+    margin-top: 60px;
+}
+
+.warning-border {
+    border-color: #ff7518 !important;
+}
+
+.success-border {
+    border-color: #3fb618 !important;
+}
+
+.greyed-out-text {
+    color: #cccccc !important;
 }

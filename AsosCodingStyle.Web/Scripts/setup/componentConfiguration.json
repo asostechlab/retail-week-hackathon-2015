@@ -30,6 +30,12 @@
     }
   },
   {
+    "componentName": "orderItems",
+    "config": {
+      "require": "components/orderItems/orderItems"
+    }
+  },
+  {
     "componentName": "orderItem",
     "config": {
       "require": "components/orderItem/orderItem"
@@ -51,6 +57,18 @@
     "componentName": "dropOffPoint",
     "config": {
       "require": "components/dropOffPoint/dropOffPoint"
+    }
+  },
+  {
+    "componentName": "packingDetails",
+    "config": {
+      "require": "components/packingDetails/packingDetails"
+    }
+  },
+  {
+    "componentName": "submitComplete",
+    "config": {
+      "require": "components/submitComplete/submitComplete"
     }
   },
   {

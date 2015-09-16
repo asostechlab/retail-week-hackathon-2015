@@ -1,39 +1,21 @@
 ﻿import templateMarkup = require('text!./returnsMethod.html');
-import ko = require('knockout');
-import OrderModel = require("../../models/orderModel");
+import ReturnsMethodModel = require("../../models/returnsMethodModel");
 
 export class ReturnsMethod {
-    private DropOffPoint = 'DropOffPoint';
-    private Collection = 'Collection';
-
+    
     constructor() {
-        this.selectedReturnsMethod = ko.observable(null);
-        this.isDropOffPointSelected = ko.pureComputed(this.computeIsDropOffPointSelected, this);
-        this.isCollectionSelected = ko.pureComputed(this.computeIsCollectionSelected, this);
+        this.isDropOffPointSelected = ReturnsMethodModel.instance.isDropOffPointSelected;
+        this.isCollectionSelected = ReturnsMethodModel.instance.isCollectionSelected;
     }
 
     selectDropOffPoint(): void {
-        this.selectedReturnsMethod(this.DropOffPoint);
-        OrderModel.instance.order.ReturnCollect = null;
+        ReturnsMethodModel.instance.selectDropOffPoint();
     }
 
     selectCollection(): void {
-        this.selectedReturnsMethod(this.Collection);
-        OrderModel.instance.order.ReturnCollect = {
-            Address: null,
-            Date: null
-        };
+        ReturnsMethodModel.instance.selectCollection();
     }
 
-    computeIsDropOffPointSelected(): boolean {
-        return this.selectedReturnsMethod() === this.DropOffPoint;
-    }
-
-    computeIsCollectionSelected(): boolean {
-        return this.selectedReturnsMethod() === this.Collection;
-    }
-
-    selectedReturnsMethod: KnockoutObservable<string>;
     isDropOffPointSelected: KnockoutComputed<boolean>;
     isCollectionSelected: KnockoutComputed<boolean>;
 }

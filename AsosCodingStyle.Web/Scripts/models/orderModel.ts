@@ -6,10 +6,10 @@ import OrderApi = require("../apis/orderApi");
 
 export class OrderModel {
 
-    // todo: implement the get method with a loading indicator
     constructor() {
         this.notifications = ko.observableArray([]);
         this.orderItemsToReturn = ko.observableArray([]);
+        this.orderItemsForFeedback = ko.observableArray([]);
         this.notifications.subscribe(value => this.order.Notifications = value);
     }
 
@@ -19,7 +19,7 @@ export class OrderModel {
             this.notifications(o.Notifications || []);
         });
     }
-
+    
     saveOrder(): Promise<void> {
         return OrderApi.instance.saveOrder(this.order);
     }
@@ -30,6 +30,7 @@ export class OrderModel {
 
     order: Order;
     orderItemsToReturn: KnockoutObservableArray<number>;
+    orderItemsForFeedback: KnockoutObservableArray<number>;
     notifications: KnockoutObservableArray<AsosCodingStyle.Data.Notification>;
 }
 

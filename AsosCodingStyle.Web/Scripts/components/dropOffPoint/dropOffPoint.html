@@ -1,59 +1,54 @@
 ﻿<h3>Find a drop-off point</h3>
 <div class="row">
-    <div class="col-lg-5">
+    <div class="col-lg-6 drop-off-point-options">
         <input type="text"
                data-bind="textInput: dropOffPointPostcode, event: { keyup: postCodeKeyUp.bind($data) }, css: { 'btn-success': dropOffPointLocationMethod() === 'PostCodeMethod' }"
                placeholder="Enter postcode"
                class="form-control"/>
-        <p class="text-center">OR</p>
+        <h5 class="text-center">OR</h5>
         <button data-bind="click: useMyLocation, css: { 'btn-success': dropOffPointLocationMethod() === 'UseMyLocationMethod' }"
                 class="btn btn-success-on-hover btn-block">Use my location</button>
     </div>
-</div>
-<!-- ko if: dropOffDetails() !== null -->
-<div class="row">
     <div class="col-lg-6">
-        Your nearest drop-off point is:<br />
-        <br />
-        <span data-bind="text: dropOffDetails().Address.AddressLine1"></span><br />
-        <span data-bind="text: dropOffDetails().Address.AddressLine2"></span><br />
-        <span data-bind="text: dropOffDetails().Address.City"></span><br />
-        <span data-bind="text: dropOffDetails().Address.PostCode"></span><br />
-        <br />
-        <span data-bind="text: dropOffDetails().OpeningTimes[0]"></span><br />
-        <span data-bind="text: dropOffDetails().OpeningTimes[1]"></span><br />
-        <span data-bind="text: dropOffDetails().OpeningTimes[2]"></span>
-    </div>
-    <div class="col-lg-6">
-        <img data-bind="attr: {src: dropOffDetails().MapUrl}" class="img-responsive" />
-    </div>
-</div>
-<div class="row form-group">
-    <div class="col-lg-12">
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" data-bind="checked: isLocationReminderSelected"> Remind me when I'm near the collection point
-            </label>
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" data-bind="checked: isTimeReminderSelected"> Remind me a week before the returns deadline if my return has not been received
-            </label>
-        </div>
-        <!-- ko if: isTimeReminderSelected -->
-        I want to be reminded by:<br />
-        <div class="row">
-            <div class="col-lg-2">
-                <label><input type="checkbox" data-bind="checked: isCalendarReminderSelected"> Calendar</label>
+        <!-- ko if: dropOffDetails() !== null -->
+        <div class="row drop-off-details">
+            <div class="col-lg-6">
+                <img data-bind="attr: {src: dropOffDetails().MapUrl}" class="img-responsive" />
             </div>
-            <div class="col-lg-2">
-                <label><input type="checkbox" data-bind="checked: isEmailReminderSelected"> Email</label>
+            <div class="col-lg-6">
+                <p class="text-primary">Your nearest drop-off point is:</p>
+
+                <p>
+                    <span data-bind="text: dropOffDetails().Address.AddressLine1"></span><br />
+                    <span data-bind="text: dropOffDetails().Address.AddressLine2"></span><br />
+                    <span data-bind="text: dropOffDetails().Address.City"></span><br />
+                    <span data-bind="text: dropOffDetails().Address.PostCode"></span>
+                </p>
+
+                <p class="text-primary">Opening times:</p>
+
+                <p>
+                    <span data-bind="text: dropOffDetails().OpeningTimes[0]"></span><br />
+                    <span data-bind="text: dropOffDetails().OpeningTimes[1]"></span><br />
+                    <span data-bind="text: dropOffDetails().OpeningTimes[2]"></span>
+                </p>
             </div>
-            <div class="col-lg-2">
-                <label><input type="checkbox" data-bind="checked: isMobileReminderSelected"> Mobile</label>
+        </div>
+        <div class="row form-group">
+            <div class="col-lg-12">
+                <p class="text-primary">Reminders:</p>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-bind="checked: isLocationReminderSelected"> Remind me when I'm near the collection point
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-bind="checked: isTimeReminderSelected"> Remind me a week before the returns deadline if my return has not been received
+                    </label>
+                </div>
             </div>
         </div>
         <!-- /ko -->
     </div>
 </div>
-<!-- /ko -->

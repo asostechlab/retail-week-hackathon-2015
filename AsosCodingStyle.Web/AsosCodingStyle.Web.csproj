@@ -63,6 +63,10 @@
       <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.0\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Azure.NotificationHubs, Version=2.16.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.NotificationHubs.1.0.3\lib\net45-full\Microsoft.Azure.NotificationHubs.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
@@ -80,6 +84,10 @@
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.1.7.0.0\lib\net35-full\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -94,6 +102,8 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -167,6 +177,9 @@
     <Content Include="index.html" />
     <Content Include="Scripts\components\collection\collection.html" />
     <Content Include="Scripts\components\dropOffPoint\dropOffPoint.html" />
+    <Content Include="Scripts\components\orderItems\orderItems.html" />
+    <Content Include="Scripts\components\submitComplete\submitComplete.html" />
+    <Content Include="Scripts\components\packingDetails\packingDetails.html" />
     <Content Include="Scripts\components\notifications\notifications.html" />
     <Content Include="Scripts\components\returnsMethod\returnsMethod.html" />
     <Content Include="Scripts\components\orderItem\orderItem.html" />
@@ -179,6 +192,9 @@
     <TypeScriptCompile Include="Scripts\apis\testApi.ts" />
     <TypeScriptCompile Include="Scripts\components\collection\collection.ts" />
     <TypeScriptCompile Include="Scripts\components\dropOffPoint\dropOffPoint.ts" />
+    <TypeScriptCompile Include="Scripts\components\orderItems\orderItems.ts" />
+    <TypeScriptCompile Include="Scripts\components\submitComplete\submitComplete.ts" />
+    <TypeScriptCompile Include="Scripts\components\packingDetails\packingDetails.ts" />
     <TypeScriptCompile Include="Scripts\components\notifications\notifications.ts" />
     <TypeScriptCompile Include="Scripts\components\returnsMethod\returnsMethod.ts" />
     <TypeScriptCompile Include="Scripts\components\orderItem\orderItem.ts" />
@@ -191,6 +207,7 @@
     <TypeScriptCompile Include="Scripts\Enums.ts">
       <DependentUpon>TypeLite.Net4.tt</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Scripts\models\returnsMethodModel.ts" />
     <TypeScriptCompile Include="Scripts\models\orderModel.ts" />
     <TypeScriptCompile Include="Scripts\models\testModel.ts" />
     <TypeScriptCompile Include="Scripts\models\reasonsModel.ts" />
@@ -227,6 +244,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\EmployeeRecord.cs" />
+    <Compile Include="Notifications\Notifications.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
