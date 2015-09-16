@@ -2,6 +2,7 @@ package com.asos.codingstyle.asoscodingstyle;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.asos.codingstyle.asoscodingstyle.multitracker.MultiTrackerActivity;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.microsoft.windowsazure.messaging.NotificationHub;
 import com.microsoft.windowsazure.notifications.NotificationsManager;
@@ -60,6 +62,10 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }
+
+        if (id == R.id.action_scan_barcode) {
+            startActivity(new Intent(this, MultiTrackerActivity.class));
         }
 
         return super.onOptionsItemSelected(item);

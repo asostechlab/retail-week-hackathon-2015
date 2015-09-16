@@ -8,8 +8,8 @@
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
         className = "com.asos.codingstyle.asoscodingstyle.MainActivity"/>
       <point      
-        x = "448"      
-        y = "1228"/>
+        x = "1784"      
+        y = "148"/>
     </statePointEntry>
     <statePointEntry>
       <state      
@@ -24,8 +24,8 @@
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
         className = "com.asos.codingstyle.asoscodingstyle.ScanBarcodeActivity"/>
       <point      
-        x = "460"      
-        y = "-464"/>
+        x = "1388"      
+        y = "-260"/>
     </statePointEntry>
     <statePointEntry>
       <state      
@@ -34,6 +34,22 @@
       <point      
         x = "1728"      
         y = "-464"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "multitracker.MultiTrackerActivity"/>
+      <point      
+        x = "464"      
+        y = "-256"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.asos.codingstyle.asoscodingstyle.multitracker.MultiTrackerActivity"/>
+      <point      
+        x = "500"      
+        y = "168"/>
     </statePointEntry>
   </locations>
 </navigationModel>
