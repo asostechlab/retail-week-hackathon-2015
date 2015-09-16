@@ -52,17 +52,5 @@
     "config": {
       "require": "components/dropOffPoint/dropOffPoint"
     }
-  },
-  {
-    "componentName": "packingHelper",
-    "config": {
-      "require": "components/packingHelper/packingHelper"
-    }
-  },
-  {
-    "componentName": "googleMap",
-    "config": {
-      "require": "components/googleMap/googleMap"
-    }
   }
 ]
