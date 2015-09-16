@@ -1,14 +1,12 @@
-﻿
-<!-- ko if: hasNotifications -->
-    <!-- ko foreach: notificationList -->
-<div>
-    <p>
-        <span data-bind="text: Message"></span><br/>
-        <span data-bind="text: FormattedDateTime"></span>
-    </p>
+﻿<!-- ko if: notificationList().length > 0 -->
+<div class="row hidden-xs hidden-sm hidden-md">
+    <div class="col-lg-12">
+        <h1>Notifications</h1>
+        <ul class="notifications-list">
+            <!-- ko foreach: notificationList -->
+            <li data-bind="text: FormattedDateTime + ' - ' + Message"></li>
+            <!-- /ko -->
+        </ul>
+    </div>
 </div>
-
-    <!-- /ko -->
 <!-- /ko -->
-
-  

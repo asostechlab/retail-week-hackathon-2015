@@ -1,10 +1,13 @@
-﻿<!-- ko if: isLoading() || isSubmitting() -->
+﻿
+<!-- ko if: isLoading() || isSubmitting() -->
 <p class="text-center loading-indicator">
     <i class="fa fa-5x fa-spin fa-spinner"></i>
 </p>
 <!-- /ko-->
 
 <!-- ko if: isShowOrderItems -->
+    <!-- ko component: 'notifications' --><!-- /ko -->
+
     <!-- ko component: 'orderItems' --><!-- /ko -->
 
     <!-- ko if: isReturningItems -->
@@ -12,7 +15,6 @@
     <!-- ko component: 'returnsMethod' --><!-- /ko -->
     <!-- /ko -->
 
-<!-- ko component: 'notifications' --><!-- /ko -->
 
 <!-- ko if: isShowSubmitButton -->
     <div class="row submit-button">

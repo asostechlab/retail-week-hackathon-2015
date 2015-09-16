@@ -1,8 +1,13 @@
-.order-item {
+.order-item,
+.notifications-list {
     border: 4px solid #fafafa;
     background-color: #fcfcfc;
     padding: 10px;
     margin-bottom: 10px;
+}
+
+.notifications-list {
+    padding-left: 30px;
 }
 
 .order-item .feedback-row {
