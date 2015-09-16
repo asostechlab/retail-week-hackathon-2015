@@ -6,7 +6,7 @@ export class PackingDetails {
 
     constructor() {
         this.isDropOffPointSelected = ReturnsMethodModel.instance.isDropOffPointSelected;
-        $('body').scrollTop(0);
+        setTimeout(() => $('body').scrollTop(0));
     }
 
     isDropOffPointSelected: KnockoutComputed<boolean>;
