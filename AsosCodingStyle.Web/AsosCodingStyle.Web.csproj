@@ -42,6 +42,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Asos.Common.Address.Web.Api.Client">
+      <HintPath>..\lib\Asos.Identity.PostalCode.HttpClient.1.0.15203.2\lib\net40\Asos.Common.Address.Web.Api.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Asos.Framework">
+      <HintPath>..\lib\Asos.Identity.Core.Framework.1.0.15250.3\lib\net40\Asos.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Asos.Identity.Http.Client">
+      <HintPath>..\lib\Asos.Identity.Http.Client.1.0.15203.1\lib\net40\Asos.Identity.Http.Client.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -88,6 +97,8 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="images\ec2a4jj.PNG" />
+    <Content Include="images\nw11de.PNG" />
     <Content Include="index.html" />
     <Content Include="Scripts\components\collection\collection.html" />
     <Content Include="Scripts\components\dropOffPoint\dropOffPoint.html" />
@@ -97,6 +108,7 @@
     <Content Include="Scripts\components\testShowEmployees\testShowEmployees.html" />
     <Content Include="Scripts\components\testAddEmployee\testAddEmployee.html" />
     <Content Include="Scripts\components\testApp\testApp.html" />
+    <TypeScriptCompile Include="Scripts\apis\dropOffPointApi.ts" />
     <TypeScriptCompile Include="Scripts\apis\orderApi.ts" />
     <TypeScriptCompile Include="Scripts\apis\testApi.ts" />
     <TypeScriptCompile Include="Scripts\components\collection\collection.ts" />

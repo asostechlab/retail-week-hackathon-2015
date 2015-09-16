@@ -7,10 +7,18 @@
 /// <reference path="Enums.ts" />
 
 declare module AsosCodingStyle.Data {
+	interface Address {
+		AddressLine1: string;
+		AddressLine2: string;
+		City: string;
+		PostCode: string;
+	}
 	interface Order {
 		Id: string;
 		Items: AsosCodingStyle.Data.OrderItem[];
 		DateCreated: Date;
+		ReturnCollect: AsosCodingStyle.Data.ReturnCollect;
+		OrderAddress: AsosCodingStyle.Data.Address;
 	}
 	interface OrderItem {
 		OrderItemId: number;
@@ -30,6 +38,10 @@ declare module AsosCodingStyle.Data {
 	interface OrderItemReturn {
 		Reason: AsosCodingStyle.Data.ReturnReasonType;
 		ExtraInformation: string;
+	}
+	interface ReturnCollect {
+		Address: AsosCodingStyle.Data.Address;
+		Date: Date;
 	}
 }
 
