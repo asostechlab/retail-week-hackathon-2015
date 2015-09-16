@@ -6,7 +6,7 @@ export class TestApi {
         var ajaxRequest = $.ajax('someApiUrl?company=' + company, {
             type: 'GET'
         });
-        return Promise.resolve<EmployeeRecord[]>(ajaxRequest);
+        return Promise.resolve<EmployeeRecord[]>(<any>ajaxRequest);
     }
 
     saveEmployeeRecords(employeeRecords: EmployeeRecord[]): Promise<void> {
@@ -20,4 +20,4 @@ export class TestApi {
 }
 
 var instance = new TestApi();
-export {instance};
+export {instance}
