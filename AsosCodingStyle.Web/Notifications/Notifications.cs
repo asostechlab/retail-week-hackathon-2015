@@ -1,8 +1,7 @@
-﻿using System.Net;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.Azure.NotificationHubs;
 
-namespace AsosCodingStyle.WebApi.Notifications
+namespace AsosCodingStyle.Web.Notifications
 {
     public class Notifications
     {
