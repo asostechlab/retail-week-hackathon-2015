@@ -14,7 +14,7 @@
 }
 
 .order-item .feedback-type-buttons button {
-    font-size: 1.3em;
+    font-size: 1.15em;
 }
 
 .loading-indicator {
@@ -39,6 +39,10 @@ body {
 .returns-method .collection h3,
 .returns-method .drop-off-point h3 {
     margin-top: 10px;
+}
+
+.returns-method .drop-off-point {
+    margin-bottom: 20px
 }
 
 .reminder-options label {

@@ -175,6 +175,7 @@
     <Content Include="images\ec2a4jj.PNG" />
     <Content Include="images\nw11de.PNG" />
     <Content Include="index.html" />
+    <Content Include="returnscollection.ics" />
     <Content Include="Scripts\components\collection\collection.html" />
     <Content Include="Scripts\components\dropOffPoint\dropOffPoint.html" />
     <Content Include="Scripts\components\orderItems\orderItems.html" />

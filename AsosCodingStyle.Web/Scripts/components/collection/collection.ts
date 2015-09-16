@@ -47,7 +47,7 @@ export class Collection {
     }
 
     addToCalendar(): void {
-        console.error('not implemented...');
+        window.location.assign('/returnscollection.ics');
     }
 
     private computeIsShowAddressEntry(): boolean {
