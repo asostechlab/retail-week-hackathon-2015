@@ -1,1 +1,62 @@
 ﻿<h3>Collection Details</h3>
+<div class="row form-group">
+    <label for="CollectionDate" class="col-lg-2 control-label">Date</label>
+    <div class="col-lg-10">
+        <input type="date" class="form-control" id="CollectionDate" placeholder="dd/mm/yyyy" data-bind="value: collectionDate" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <button data-bind="click: useMyDeliveryAddress">Collect from my delivery address</button>
+        &nbsp;OR&nbsp;
+        <button data-bind="click: enterANewAddress">Enter a new address</button>
+    </div>
+</div>
+
+<!-- ko if: isShowAddressEntry -->
+<div class="row form-group">
+    <label for="AddressLine1" class="col-lg-2 control-label">Address Line 1</label>
+    <div class="col-lg-10">
+        <input type="text" class="form-control" id="AddressLine1" data-bind="textInput: addressLine1" />
+    </div>
+</div>
+<div class="row form-group">
+    <label for="AddressLine2" class="col-lg-2 control-label">Address Line 2</label>
+    <div class="col-lg-10">
+        <input type="text" class="form-control" id="AddressLine2" data-bind="textInput: addressLine2" />
+    </div>
+</div>
+<div class="row form-group">
+    <label for="City" class="col-lg-2 control-label">City</label>
+    <div class="col-lg-10">
+        <input type="text" class="form-control" id="City" data-bind="textInput: city" />
+    </div>
+</div>
+<div class="row form-group">
+    <label for="PostCode" class="col-lg-2 control-label">Post Code</label>
+    <div class="col-lg-10">
+        <input type="text" class="form-control" id="PostCode" data-bind="textInput: postCode" />
+    </div>
+</div>
+<!-- /ko -->
+
+<!-- ko if: collectionMethod() !== null -->
+<p data-bind="text: addressSummary"></p>
+
+<div class="row form-group">
+    <div class="col-lg-12">
+        I want to be reminded by:<br />
+        <div class="row">
+            <div class="col-lg-2">
+                <label><input type="checkbox" data-bind="checked: isCalendarReminderSelected"> Calendar</label>
+            </div>
+            <div class="col-lg-2">
+                <label><input type="checkbox" data-bind="checked: isEmailReminderSelected"> Email</label>
+            </div>
+            <div class="col-lg-2">
+                <label><input type="checkbox" data-bind="checked: isMobileReminderSelected"> Mobile</label>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /ko -->
