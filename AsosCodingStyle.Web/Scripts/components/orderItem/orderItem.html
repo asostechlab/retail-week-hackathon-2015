@@ -20,7 +20,7 @@
         </div>
     </div>
     <!-- ko if: isShowPositiveFeedback -->
-    <div class="row">
+    <div class="row feedback-row">
         <div class="col-lg-3"></div>
         <!-- ko foreach: positiveFeedbackTypes -->
         <div class="col-lg-2 text-success-on-hover text-center" data-bind="click: $parent.toggleFeedbackType.bind($parent), css: { 'text-success': $parent.isFeedbackTypeSelected.call($parent, $data) }">
@@ -31,7 +31,7 @@
     </div>
     <!-- /ko -->
     <!-- ko if: isShowReturnsFeedback -->
-    <div class="row">
+    <div class="row feedback-row">
         <div class="col-lg-1"></div>
         <!-- ko foreach: returnReasons -->
         <div class="col-lg-2 text-warning-on-hover text-center" data-bind="click: $parent.selectReturnReason.bind($parent), css: { 'text-warning': $parent.isReturnReasonSelected.call($parent, $data) }">

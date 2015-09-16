@@ -1,29 +1,39 @@
 ﻿<h1>How do you want to return your items?</h1>
-<div class="returns-method drop-off-point">
+<div class="returns-method">
     <div class="row">
-        <div class="col-lg-12" data-bind="click: selectDropOffPoint">
-            ICON - Drop Off Point
+        <div class="col-lg-6">
+            <div class="drop-off-point">
+                <div class="row text-success-on-hover" data-bind="click: selectDropOffPoint, css: {'text-success': isDropOffPointSelected}">
+                    <div class="col-lg-2 col-lg-offset-2 returns-method-icon">
+                        <i class="fa fa-3x fa-building"></i>
+                    </div>
+                    <div class="col-lg-8">
+                        <h3>Drop-off point</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="collection">
+                <div class="row text-success-on-hover" data-bind="click: selectCollection, css: {'text-success': isCollectionSelected}">
+                    <div class="col-lg-2 col-lg-offset-2 returns-method-icon">
+                        <i class="fa fa-3x fa-automobile"></i>
+                    </div>
+                    <div class="col-lg-8">
+                        <h3>Book a collection</h3>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- ko if: isDropOffPointSelected -->
     <div class="row">
         <div class="col-lg-12">
+            <!-- ko if: isDropOffPointSelected -->
             <!-- ko component: 'dropOffPoint' --><!-- /ko -->
-        </div>
-    </div>
-    <!-- /ko -->
-</div>
-<div class="returns-method collection">
-    <div class="row">
-        <div class="col-lg-12" data-bind="click: selectCollection">
-            ICON - Collection
-        </div>
-    </div>
-    <!-- ko if: isCollectionSelected -->
-    <div class="row">
-        <div class="col-lg-12">
+            <!-- /ko -->
+            <!-- ko if: isCollectionSelected -->
             <!-- ko component: 'collection' --><!-- /ko -->
+            <!-- /ko -->
         </div>
     </div>
-    <!-- /ko -->
 </div>

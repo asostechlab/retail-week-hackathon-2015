@@ -1,11 +1,12 @@
-﻿<h1>Order items</h1>
-
-<!-- ko ifnot: hasLoaded -->
-<span class="loading"></span>
+﻿<!-- ko ifnot: hasLoaded -->
+<p class="text-center loading-indicator">
+    <i class="fa fa-5x fa-spin fa-spinner"></i>
+</p>
 <!-- /ko-->
 
 <!-- ko if: hasLoaded -->
 
+    <h1>Order items</h1>
     <!-- ko foreach: orderItems -->
     <!-- ko component: {name: 'orderItem', params: {data: $data} }--><!-- /ko -->
     <!-- /ko -->
