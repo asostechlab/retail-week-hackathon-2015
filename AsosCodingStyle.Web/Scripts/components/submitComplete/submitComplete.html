@@ -1,8 +1,12 @@
-﻿<h1>Thanks</h1>
-<!-- ko if: isReturningItems -->
-<h4>We've received your returns request.</h4>
+﻿<!-- ko if: isReturningItems -->
 <!-- ko component: 'packingDetails' --><!-- /ko -->
 <!-- /ko -->
 <!-- ko ifnot: isReturningItems -->
-<h4>We've received your feedback. This will help us to give you better advice when buying in the future.</h4>
+<div class="row">
+    <div class="col-lg-4 col-lg-offset-4 text-center">
+        <h1>Thanks</h1>
+        <i class="fa fa-thumbs-o-up fa-5x"></i>
+        <p>We've received your feedback. This will help us to give you better advice when buying in the future.</p>
+    </div>
+</div>
 <!-- /ko -->
