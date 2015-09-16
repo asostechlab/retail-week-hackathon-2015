@@ -10,7 +10,9 @@
     <script src="/Scripts/setup/require.config.js"></script>
     <script src="/Scripts/setup/startup.js"></script>
     <script src="/Scripts/libs/jquery.js"></script>
+    <script src="/Scripts/libs/jquery.signalR.js"></script>
     <script src="/Scripts/libs/bootstrap.js"></script>
+    <script src="signalr/hubs"></script>
 </head>
 <body>
     <!-- can view the bootstrap theme used at https://bootswatch.com/cosmo/ -->
@@ -21,7 +23,21 @@
         require(['startup']);
     </script>
 
-    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY9f1rC9kBNr4fL6kKzuuxJpFj_jdQJwQ&signed_in=true" async defer></script>-->
+    <!--Add script to update the page and send messages.-->
+    <script type="text/javascript">
+        $(function () {
+            var chat = $.connection.asosCodingStyleHub;
+
+            chat.client.hello = function (message) {
+                alert(message);
+            };
+
+            $.connection.hub.start().done(function () {
+                $('#sendmessage').click(function () {
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>

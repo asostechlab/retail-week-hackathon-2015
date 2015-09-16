@@ -12,7 +12,7 @@ export class Order {
             this.orderItems = OrderModel.instance.order.Items;
             this.hasLoaded(true);       
         });
-
+        
         this.isReturningItems = ko.pureComputed(this.computeIsReturningItems, this);
         this.returnSummaryText = ko.pureComputed(this.computeReturnSummaryText, this);
     }

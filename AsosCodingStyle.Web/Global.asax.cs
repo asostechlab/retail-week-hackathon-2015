@@ -2,12 +2,14 @@
 {
     using System.Web;
     using System.Web.Http;
-    using Asos.Framework.Configuration.Providers;
+    using System.Web.Routing;
 
     public class WebApiApplication : HttpApplication
     {
         protected void Application_Start()
         {
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
     }

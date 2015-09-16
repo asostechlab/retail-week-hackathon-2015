@@ -4,6 +4,7 @@
         'jquery': 'libs/jquery',
         'knockout': 'libs/knockout-latest.debug',
         'text': 'libs/text',
-        'lodash': 'libs/lodash'
+        'lodash': 'libs/lodash',
+        'signalr': 'libs/jquery.signalR'
     }
 });
