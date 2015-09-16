@@ -43,6 +43,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Asos.Common.Address.Web.Api.Client">
+      <HintPath>..\lib\Asos.Identity.PostalCode.HttpClient.1.0.15203.2\lib\net40\Asos.Common.Address.Web.Api.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Asos.Framework">
+      <HintPath>..\lib\Asos.Identity.Core.Framework.1.0.15250.3\lib\net40\Asos.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Asos.Identity.Http.Client">
+      <HintPath>..\lib\Asos.Identity.Http.Client.1.0.15203.1\lib\net40\Asos.Identity.Http.Client.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -86,6 +95,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrastructure\Logging\NullLogger.cs" />
+    <Compile Include="Controllers\PostcodeLookupController.cs" />
     <Compile Include="Infrastructure\JsonContent\JsonContentNegotiator.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />

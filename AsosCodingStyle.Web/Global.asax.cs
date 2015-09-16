@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Http;
-using System.Web.Routing;
-
-namespace AsosCodingStyle.Web
+﻿namespace AsosCodingStyle.Web
 {
-    public class WebApiApplication : System.Web.HttpApplication
+    using System.Web;
+    using System.Web.Http;
+    using Asos.Framework.Configuration.Providers;
+
+    public class WebApiApplication : HttpApplication
     {
         protected void Application_Start()
         {
