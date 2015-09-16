@@ -239,7 +239,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="AsoscodingStyleHub.cs" />
-    <Compile Include="Controllers\NotificationsController.cs" />
+    <Compile Include="Controllers\NotifyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -269,7 +269,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\web.config" />
-    <Content Include="Views\Notifications\Index.cshtml" />
+    <Content Include="Views\Notify\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

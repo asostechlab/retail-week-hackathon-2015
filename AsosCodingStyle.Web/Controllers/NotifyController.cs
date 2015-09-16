@@ -2,7 +2,7 @@
 {
     using System.Web.Mvc;
 
-    public class NotificationsController : Controller
+    public class NotifyController : Controller
     {
         // GET: Notifications
         public ActionResult Index()
