@@ -9,18 +9,25 @@ namespace AsosCodingStyle.Web
     {
         public static void SendReturnedPackageReceivedNotification()
         {
+            var message = "Your package with returned goods for order 123112 has been received. Your refund payment will be made within 2 working days.";
+
             GetHubContext().Clients.All.returnedPackageReceived(new Notification
             {
-                 Message = "Your package with returned goods for order 123112 has been received. Your refund payment will be made within 2 working days.", DateTime = DateTime.Now
+                 Message = message, DateTime = DateTime.Now
             });
+
+            // Notifications.Notifications.Instance.Send(message).Wait();
         }
 
         public static void SendPaymentMadeNotification()
         {
+            var message = "A refund of £92.50 for your order 123112 has been made into your account";
             GetHubContext().Clients.All.returnedPackageReceived(new Notification
             {
-                 Message = "A refund of £92.50 for your order 123112 has been made into your account", DateTime = DateTime.Now
+                 Message = message, DateTime = DateTime.Now
             });
+
+            // Notifications.Notifications.Instance.Send(message).Wait();
         }
 
         private static IHubContext GetHubContext()
